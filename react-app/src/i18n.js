@@ -20,6 +20,7 @@ i18n.use(detector)
 	.init({
 		resources,
 		fallbackLng: 'en',
+		lng: 'en',
 		interpolation: {
 			escapeValue: false,
 		},
