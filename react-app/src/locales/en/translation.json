@@ -27,6 +27,10 @@
 	"price": "Price",
 	"sale": "Sale Off",
 	"empty-cart": "Your's cart is currently empty!",
+	"required-login": "You need to log in first !",
+	"isExist": "The product already exists in the wishlist",
+	"wish": "Successfully added product to wishlist",
+	"wish-empty": "Your's wish list is currently empty!",
 	"Categories": {
 		"Title": "Category",
 		"Top_Categories": {

@@ -10,7 +10,7 @@ import Slide from '../Home/Slide';
 import { getProductDetail, getProductHome, createComment, getComment } from '../../../redux/actions';
 import { useTranslation } from 'react-i18next';
 import { connect, useDispatch } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './style.scss';

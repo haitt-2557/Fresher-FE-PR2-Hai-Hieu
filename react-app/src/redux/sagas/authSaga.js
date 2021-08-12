@@ -1,6 +1,6 @@
 /** @format */
 
-import { put, takeEvery, take, takeLatest, takeLeading } from 'redux-saga/effects';
+import { put, takeLeading } from 'redux-saga/effects';
 import * as API from '../../api/index';
 import { toast } from 'react-toastify';
 import { Types } from '../constants/auth.constant';
@@ -57,6 +57,7 @@ function* loginGoogle(action) {
 		type: Types.LOGIN_GOOGLE,
 		payload: action.payload,
 	});
+
 	action.history.push('/');
 }
 

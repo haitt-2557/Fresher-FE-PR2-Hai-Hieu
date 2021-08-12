@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Footer from './components/Footer';
 import Header from './components/Headers';
 import { Spin } from 'antd';
+import PaymentLayout from './layouts/PaymentLayout';
 function App() {
-	const user = localStorage.getItem('profile');
 	return (
 		<Suspense
 			fallback={
@@ -33,6 +33,7 @@ function App() {
 						<Route exact path='/product/:id' component={React.lazy(() => import('./pages/User/ProductDetails'))} />
 						<Route exact path='/shop' component={React.lazy(() => import('./pages/User/Products'))} />
 						<Route exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></Route>
+						<PaymentLayout exact path='/payment' component={React.lazy(() => import('./pages/User/Checkout'))} />
 					</Switch>
 				</Container>
 				<Footer />

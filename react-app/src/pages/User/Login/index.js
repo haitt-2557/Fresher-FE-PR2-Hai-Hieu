@@ -11,7 +11,6 @@ import './style.scss';
 import { Link, useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import { useDispatch } from 'react-redux';
-import { Types } from '../../../redux/constants/auth.constant';
 import { login, login_google } from '../../../redux/actions/authAction';
 export default function Login() {
 	const { t } = useTranslation();
@@ -126,9 +125,7 @@ export default function Login() {
 										<Button
 											className='form-login__btn'
 											onClick={renderProps.onClick}
-											icon={
-												<GrGooglePlus className='form-login__btn--icon' />
-											}>
+											icon={<GrGooglePlus className='form-login__btn--icon' />}>
 											{t('login.google')}
 										</Button>
 									</Form.Item>
@@ -145,9 +142,7 @@ export default function Login() {
 									span: 20,
 								}}>
 								<Link to='/register'>
-									<Typography style={{ float: 'right' }}>{`${t(
-										'login.already',
-									)} Sign Up`}</Typography>
+									<Typography style={{ float: 'right' }}>{`${t('login.already')} Sign Up`}</Typography>
 								</Link>
 							</Form.Item>
 						</Form>

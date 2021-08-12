@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -38,10 +38,7 @@ const Slide = ({ data, type, xl, lg, md, sm, xs, page }) => {
 	const slideShow = (item, index) => {
 		return (
 			<div key={1}>
-				<div
-					className='slideShow__img'
-					style={{ backgroundImage: `url(${item.img})` }}
-					key={`slideShow-${index}`}>
+				<div className='slideShow__img' style={{ backgroundImage: `url(${item.img})` }} key={`slideShow-${index}`}>
 					<div className={`slideShow__content  slideShow__content--${index + 1}`}>
 						<h4>{item.thumbnail}</h4>
 						<h2>
@@ -78,10 +75,7 @@ const Slide = ({ data, type, xl, lg, md, sm, xs, page }) => {
 			return tempArr.map((element, index) =>
 				element.map((item) => (
 					<Row key={`row-${item.id}`} gutter={[16, 16]}>
-						<Col
-							sm={24}
-							className='slide-product__col'
-							key={`col-${element.id}-${index}`}>
+						<Col sm={24} className='slide-product__col' key={`col-${element.id}-${index}`}>
 							<ProductItem data={item}> </ProductItem>
 						</Col>
 					</Row>
@@ -93,10 +87,7 @@ const Slide = ({ data, type, xl, lg, md, sm, xs, page }) => {
 					<Col sm={24} key={`col-${index}+1`}>
 						{element.map((item, index) => (
 							<Row key={`rows-${item.id} + ${index}`} gutter={[16, 16]}>
-								<Col
-									sm={24}
-									className='slide-product__col'
-									key={`col-child-${item.id}-${index + 1}`}>
+								<Col sm={24} className='slide-product__col' key={`col-child-${item.id}-${index + 1}`}>
 									<ProductItem data={item}> </ProductItem>
 								</Col>
 							</Row>
@@ -108,21 +99,10 @@ const Slide = ({ data, type, xl, lg, md, sm, xs, page }) => {
 	};
 
 	return (
-		<div
-			className={`slide ${
-				type === 'slideShow'
-					? 'slideShow'
-					: type === 'category'
-					? 'slide-category'
-					: 'slide-product'
-			}`}>
+		<div className={`slide ${type === 'slideShow' ? 'slideShow' : type === 'category' ? 'slide-category' : 'slide-product'}`}>
 			<Slider {...settings}>
 				{type === 'slideShow' || type === 'category'
-					? data?.map((item, index) =>
-							type === 'slideShow'
-								? slideShow(item, index)
-								: slideCategory(item, index),
-					  )
+					? data?.map((item, index) => (type === 'slideShow' ? slideShow(item, index) : slideCategory(item, index)))
 					: slideProduct(data, page)}
 			</Slider>
 		</div>

@@ -11,6 +11,7 @@ import './styles.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import addToCart from '../../redux/actions/cart.action';
 import { useTranslation } from 'react-i18next';
+import { addWish } from '../../redux/actions/wishlist.action';
 
 const ProductItem = ({ data }) => {
 	const { t } = useTranslation();
@@ -18,11 +19,22 @@ const ProductItem = ({ data }) => {
 	let { id, name, rate, newPrice, oldPrice, news, img } = data;
 	const sales = oldPrice && Math.ceil((1 - newPrice / oldPrice) * 100);
 	const dispatch = useDispatch();
+	const userInfo = JSON.parse(localStorage.getItem('profile'));
+	const itemWish = useSelector((state) => state.wish.wishList);
 	const handleAddToCart = (item) => {
 		toast.success(t('Add cart success'), {
 			position: toast.POSITION.TOP_RIGHT,
 		});
 		dispatch(addToCart(item));
+	};
+	const handleAddToWish = (item) => {
+		if (userInfo) {
+			dispatch(addWish(item));
+		} else {
+			toast.warning(t('required-login'), {
+				position: toast.POSITION.TOP_RIGHT,
+			});
+		}
 	};
 	return (
 		<div className='product-item'>
@@ -33,7 +45,7 @@ const ProductItem = ({ data }) => {
 				</Link>
 				<div className='product-item__widget'>
 					<span className='icon icon-round product-item__widget-icon'>
-						<Tooltip placement='top' title='WISHLIST'>
+						<Tooltip placement='top' title='WISHLIST' onClick={() => handleAddToWish(data)}>
 							<HiHeart />
 						</Tooltip>
 					</span>

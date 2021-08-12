@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateCart, deleteCart } from '../../../redux/actions/cart.action';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { deleteWish } from '../../../redux/actions/wishlist.action';
 
 const { Option } = Select;
 const navbarData = [
@@ -45,7 +46,7 @@ const navbarData = [
 			{
 				id: 2,
 				name: 'Checkout',
-				path: '/checkout',
+				path: '/payment',
 			},
 			{
 				id: 3,
@@ -71,7 +72,10 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const location = useLocation();
 	const [visible, setVisible] = useState(false);
 	const [visibleMobile, setVisibleMobile] = useState(false);
+	const [isWishList, setIsWishList] = useState(false);
 	const productCart = useSelector((state) => state.cart);
+	const user = localStorage.getItem('profile');
+	const wish_list = useSelector((state) => state.wish);
 	const dispatch = useDispatch();
 	const handleUpQuantity = (item) => {
 		const type = 'increase';
@@ -85,6 +89,7 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const deleteCartProduct = (item) => {
 		dispatch(deleteCart(item));
 	};
+
 	const menu = (data) => {
 		return data.map((item, index) =>
 			!item.dropdown ? (
@@ -151,6 +156,20 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const onCloseMobile = () => {
 		setVisibleMobile(false);
 	};
+	const onShowWishList = () => {
+		if (user) {
+			setIsWishList(true);
+		} else {
+			toast.warning(
+				t('required-login', {
+					position: toast.POSITION.TOP_RIGHT,
+				}),
+			);
+		}
+	};
+	const onCloseWishList = () => {
+		setIsWishList(false);
+	};
 	return (
 		<>
 			<div className='navbar'>
@@ -161,8 +180,36 @@ export default function Navbar({ onChange, users, userExpand }) {
 				<div className='navbar__cart'>
 					<div className='navbar__cart-icon'>
 						<div className='icon__wish'>
-							<FavoriteIcon className='icon__wish-icon' />
-							<span className='icon__wish-number'>1</span>
+							<FavoriteIcon className='icon__wish-icon' onClick={onShowWishList} />
+							<span className='icon__wish-number'>{wish_list.numberWishList}</span>
+							<Drawer
+								title={t('Categories.My_Account.My Wishlist')}
+								width={360}
+								placement='right'
+								closable={false}
+								onClose={onCloseWishList}
+								visible={isWishList}
+								getContainer={false}>
+								{wish_list?.wishList.length > 0 ? (
+									wish_list?.wishList.map((item, index) => (
+										<div className='cart-drawer' key={item.id + index}>
+											<div className='cart-drawer__product'>
+												<img src={item?.img[0]} alt={item.name} className='cart-drawer__product-img' />
+												<div className='cart-drawer__product-desc'>
+													<h3 className='desc__title'>{item.name}</h3>
+													<span className='desc__price'>{item.price.toLocaleString('vi-VN')}</span>
+												</div>
+											</div>
+											<DeleteOutlined className='cart-drawer__delete' onClick={() => dispatch(deleteWish(item))} />
+										</div>
+									))
+								) : (
+									<div className='cart-drawer__empty'>
+										<img src={empty} alt='empty-cart' style={{ width: '100%' }} />
+										<p>{t('wish-empty')}</p>
+									</div>
+								)}
+							</Drawer>
 						</div>
 						<div className='icon__cart site-drawer-render-in-current-wrapper'>
 							<ShoppingCartIcon className='icon__cart-icon' onClick={onShowDrawer} />

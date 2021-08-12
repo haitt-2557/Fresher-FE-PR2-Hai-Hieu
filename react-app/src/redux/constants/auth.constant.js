@@ -5,4 +5,5 @@ export const Types = {
 	SIGNUP: 'SIGNUP',
 	LOGOUT: 'LOGOUT',
 	LOGIN_GOOGLE: 'LOGIN_GOOGLE',
+
 };
