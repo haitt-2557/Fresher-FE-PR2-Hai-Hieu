@@ -22,6 +22,7 @@ export const authReducer = (state = authState, action) => {
 				loading: false,
 			};
 		case Types.SIGNUP:
+			localStorage.setItem('profile', JSON.stringify({ ...action?.payload }));
 			return {
 				...state,
 				authData: action.payload,
