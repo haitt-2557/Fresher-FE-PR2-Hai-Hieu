@@ -1,0 +1,35 @@
+@import "../assets/scss/variable";
+@import "../assets/scss/mixin";
+
+
+.payment {
+    &-layout {
+        position: relative;
+        background-color: $white;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    &__left {
+        &::before {
+            content: "";
+            @include absolute(0, 0, 0, -50%);
+            background-color: $white;
+            width: 100%;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            @include absolute(0, 0, 0, 0);
+            background-color: $white;
+            width: 100%;
+            z-index: 1;
+            @include desktop {
+                left: 3rem;
+            }
+            @include large {
+                left: 2rem;
+            }
+        }
+    }
+}

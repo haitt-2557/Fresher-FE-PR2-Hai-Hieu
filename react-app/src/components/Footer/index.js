@@ -16,26 +16,12 @@ export default function Footer() {
 		{
 			id: 1,
 			name: 'Useful Links',
-			list: [
-				'About Us',
-				'About Our Shop',
-				'Secure Shopping',
-				'Delivery infomation',
-				'Privacy Policy',
-				'Our Sitemap',
-			],
+			list: ['About Us', 'About Our Shop', 'Secure Shopping', 'Delivery infomation', 'Privacy Policy', 'Our Sitemap'],
 		},
 		{
 			id: 2,
 			name: 'About Us',
-			list: [
-				'Who We Are',
-				'Our Services',
-				'Projects',
-				'Contact',
-				'Innovation',
-				'Testimonials',
-			],
+			list: ['Who We Are', 'Our Services', 'Projects', 'Contact', 'Innovation', 'Testimonials'],
 		},
 	];
 	return (
@@ -46,12 +32,8 @@ export default function Footer() {
 						<div className='footer__infor'>
 							<img src={logo} alt='logo' className='footer__infor-logo' />
 							<p className='footer__infor-address'>{t('footer.Address')}</p>
-							<p className='footer__infor-phone'>
-								{t('footer.Phone')}: +65 11.188.888
-							</p>
-							<p className='footer__infor-email'>
-								{t('footer.Email')}: ogani@gmail.com
-							</p>
+							<p className='footer__infor-phone'>{t('footer.Phone')}: +65 11.188.888</p>
+							<p className='footer__infor-email'>{t('footer.Email')}: ogani@gmail.com</p>
 						</div>
 					</Col>
 					{footerData.map((item) => (
@@ -74,7 +56,7 @@ export default function Footer() {
 								placeholder={t('footer.Placeholder')}
 								enterButton={t('footer.Subcribe_btn')}
 								size='large'
-								className='footer__subcribe-btn'
+								className='footer__subcribe-btn '
 							/>
 							<div className='footer__subcribe-icon'>
 								<Link to='' className='icon__custom'>

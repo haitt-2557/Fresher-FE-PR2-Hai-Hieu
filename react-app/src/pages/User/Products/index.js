@@ -20,7 +20,6 @@ export default function Product() {
 	const params = useSelector((state) => state.productReducer.params);
 	const productSlider = useSelector((state) => state.productReducer.productHome);
 	const productLimit = useSelector((state) => state.productReducer.productsData);
-	const productTotal = useSelector((state) => state.productReducer.totalProduct);
 	const pagination = useSelector((state) => state.productReducer.pagination);
 
 	useEffect(() => {
@@ -28,17 +27,17 @@ export default function Product() {
 		body.scrollIntoView({ behavior: 'smooth' }, 500);
 		document.title = 'Oragin | Shop';
 		dispatch(getProducts({ page: 1, limit: 9 }));
-		dispatch(getTotalProducts({}));
 		dispatch(getProductHome({}));
 	}, [dispatch]);
 	const handleChangePage = async (currentPage, currentSize) => {
-		const product = productTotal.slice(currentPage * currentSize - currentSize, currentPage * currentSize);
-		const payload = {
-			product: product,
-			currentPage: currentPage,
-			limit: currentSize,
-		};
-		dispatch({ type: CHANGE_PAGE, payload: payload });
+		// const product = productTotal.slice(currentPage * currentSize - currentSize, currentPage * currentSize);
+		// const payload = {
+		// 	product: product,
+		// 	currentPage: currentPage,
+		// 	limit: currentSize,
+		// };
+		// dispatch({ type: CHANGE_PAGE, payload: payload });
+		dispatch(getProducts({ page: currentPage, limit: currentSize }));
 	};
 	const handleChangeSort = (value) => {
 		if (value === 'featured') {
@@ -78,7 +77,7 @@ export default function Product() {
 										</Select>
 									</div>
 									<div className='list__filter-result'>
-										<span>{`${productTotal.length} ${t('products.found')}`}</span>
+										<span>{`${pagination.total} ${t('products.found')}`}</span>
 									</div>
 									<div className='list__filter-icon'>
 										<IoGrid style={{ marginRight: '10px', cursor: 'pointer' }} />

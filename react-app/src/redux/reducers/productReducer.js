@@ -11,8 +11,8 @@ import {
 } from '../constants';
 
 const initialState = {
-	params: {},
-	productHome: {},
+	params: { },
+	productHome: { },
 	productsData: [],
 	totalProduct: [],
 	pagination: {
@@ -37,6 +37,10 @@ export default function productReducer(state = initialState, action) {
 				...state,
 				productsData: [...action.payload.product],
 				params: action.payload.params,
+				pagination: {
+					...state.pagination,
+					total: action.payload.total,
+				},
 			};
 		case GET_PRODUCTS_FAIL: {
 			return state;
@@ -53,17 +57,18 @@ export default function productReducer(state = initialState, action) {
 		case GET_TOTAL_PRODUCTS_FAIL: {
 			return state;
 		}
-		case CHANGE_PAGE: {
-			return {
-				...state,
-				productsData: action.payload.product,
-				pagination: {
-					...state.pagination,
-					currentPage: action.payload.currentPage,
-					limit: action.payload.limit,
-				},
-			};
-		}
+		// case CHANGE_PAGE: {
+		// 	return {
+		// 		...state,
+		// 		productsData: action.payload.product,
+		// 		pagination: {
+		// 			...state.pagination,
+		// 			currentPage: action.payload.currentPage,
+		// 			limit: action.payload.limit,
+		// 		},
+		// 	};
+		// }
+
 		default:
 			return state;
 	}

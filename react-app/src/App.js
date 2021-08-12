@@ -5,8 +5,7 @@ import { Spin } from 'antd';
 import PaymentLayout from './layouts/PaymentLayout';
 import PrivateLayout from './layouts/PrivateLayouts';
 import PublicLayout from './layouts/PublicLayout';
-import ManageProduct from './pages/Admin/Manage Product/index';
-import ManageCategory from './pages/Admin/Manage Category/index';
+
 function App() {
 	return (
 		<Suspense
@@ -32,29 +31,22 @@ function App() {
 					<PublicLayout exact path='/product/:id' component={React.lazy(() => import('./pages/User/ProductDetails'))} />
 					<PublicLayout exact path='/shop' component={React.lazy(() => import('./pages/User/Products'))} />
 					<PublicLayout exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></PublicLayout>
+					<PaymentLayout exact path='/payment' component={React.lazy(() => import('./pages/User/Payment/component/payment'))} />
+					<PaymentLayout exact path='/shipping' component={React.lazy(() => import('./pages/User/Payment/component/paymentShipping'))} />
+					<PaymentLayout
+						exact
+						path='/paymentConfirm'
+						component={React.lazy(() => import('./pages/User/Payment/component/paymentConfirm'))}
+					/>
+					<PaymentLayout exact path='/success/:id' component={React.lazy(() => import('./pages/User/Success'))} />
 					<PaymentLayout exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles/profile'))} />
 					<PaymentLayout exact path='/profile/password' component={React.lazy(() => import('./pages/User/Profiles/changepass'))} />
 					<PaymentLayout exact path='/profile/purchases' component={React.lazy(() => import('./pages/User/Profiles/purchase'))} />
 					<PrivateLayout exact path='/admin' component={React.lazy(() => import('./pages/Admin/index'))}></PrivateLayout>
-					<Route
-						exact
-						path='/admin/manage-product'
-						render={() => (
-							<PrivateLayout>
-								<ManageProduct />
-							</PrivateLayout>
-						)}></Route>
-					<Route
-						exact
-						path='/admin/manage-category'
-						render={() => (
-							<PrivateLayout>
-								<ManageCategory />
-							</PrivateLayout>
-						)}></Route>
+
 				</Switch>
-			</Router>
-		</Suspense>
+			</Router >
+		</Suspense >
 	);
 }
 
