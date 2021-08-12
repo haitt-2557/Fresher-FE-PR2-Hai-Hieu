@@ -1,0 +1,15 @@
+/** @format */
+
+.profile {
+	padding: 2rem 0;
+
+	&__order {
+		&-noOrder {
+			text-align: center;
+			font-size: 1.8rem;
+		}
+	}
+}
+.ant-form-item-label {
+	text-align: left;
+}

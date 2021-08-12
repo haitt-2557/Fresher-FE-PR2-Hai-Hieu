@@ -24,3 +24,9 @@ export const login_google = (form, history) => {
 		history,
 	};
 };
+export const updateProfile = (form) => {
+	return {
+		type: Types.UPDATE_PROFILE,
+		payload: form,
+	};
+};

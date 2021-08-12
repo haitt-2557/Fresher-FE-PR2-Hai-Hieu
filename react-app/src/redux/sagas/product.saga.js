@@ -51,7 +51,7 @@ function* getProductHomeSaga(action) {
 
 function* getProductSaga(action) {
 	try {
-		const { page, limit, category, price, tag, sort } = action.payload;
+		const { page, limit, category, price, tag, sort, name } = action.payload;
 		const response = yield axios({
 			method: 'GET',
 			url: `${apiURL}/products`,
@@ -65,6 +65,7 @@ function* getProductSaga(action) {
 				...(sort === 'priceLowToHigh' && { _sort: 'newPrice', _order: 'asc' }),
 				...(sort === 'priceHighToLow' && { _sort: 'newPrice', _order: 'desc' }),
 				...(sort === 'date' && { news: true }),
+				...(name && { name_like: name }),
 			},
 		});
 		const data = response.data;
@@ -83,7 +84,7 @@ function* getProductSaga(action) {
 
 function* getTotalProductSaga(action) {
 	try {
-		const { category, price, tag, sort } = action.payload;
+		const { category, price, tag, sort, name } = action.payload;
 
 		const response = yield axios({
 			method: 'GET',
@@ -96,6 +97,7 @@ function* getTotalProductSaga(action) {
 				...(sort === 'priceLowToHigh' && { _sort: 'newPrice', _order: 'asc' }),
 				...(sort === 'priceHighToLow' && { _sort: 'newPrice', _order: 'desc' }),
 				...(sort === 'date' && { news: true }),
+				...(name && { name_like: name }),
 			},
 		});
 		const data = response.data;

@@ -8,6 +8,7 @@ import { orderReducer } from './orderReducer';
 import productReducer from './productReducer';
 import categoryReducer from './categoryReducer';
 import { productDetailReducer } from './productDetail.reducer';
+import { wishListReducer } from './wishlist.reducer';
 
 const rootReducer = combineReducers({
 	accountReducer: accountReducer,
@@ -17,5 +18,6 @@ const rootReducer = combineReducers({
 	productReducer,
 	productDetailReducer,
 	categoryReducer,
+	wish: wishListReducer,
 });
 export default rootReducer;

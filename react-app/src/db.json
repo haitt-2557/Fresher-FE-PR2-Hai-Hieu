@@ -1,29 +1,23 @@
 {
 	"users": [
 		{
-			"email": "hieulvtgcd17213@fpt.edu.vn",
-			"password": "$2a$10$BoscoxI58dmCIhmB.1YnTelxILyV3RVCw/rQgwTgh50kzrhnULzpO",
-			"firstname": "Lưu",
-			"lastname": "Hiếu",
+			"email": "hieuluu@gmail.com",
+			"password": "$2a$10$b09rGgrBVgAJAPWawrUPHuezrkN3nKEAKi5XOXEQM6dgqiMMPLmMi",
+			"firstname": "Hiếu",
+			"lastname": "Lưu",
 			"role": "user",
 			"id": 1,
-			"description": ""
+			"phone": "0796849035",
+			"address": "District, Da Nang City",
+			"birthday": "2001-10-09T17:00:00.000Z",
+			"imageUrl": "https://scontent.fdad1-3.fna.fbcdn.net/v/t1.6435-9/171555499_1572742106269507_6648054250086505409_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ty4xLK-1BwcAX8T4xzG&_nc_ht=scontent.fdad1-3.fna&oh=4a8580eee03aeeb62383476c5d9e621d&oe=614956D8"
 		},
 		{
-			"email": "truongthanhhai283@gmail.com",
-			"password": "$2a$10$GB6SK9aWuJUFlyN1uWcOx.2zjEEbnxode9V0uySOd1GqEbafdc7Mq",
-			"firstname": "Truong Thanh",
-			"lastname": "Hai",
-			"role": "user",
+			"email": "admin@gmail.com",
+			"password": "$2a$10$Fwzv26S3SQ0wc903rCiDg.oIdA32smsF9DwW30OaUIQLD5i.PTkxW",
+			"role": "admin",
+			"name": "Admin",
 			"id": 2
-		},
-		{
-			"email": "hai@gmail.com",
-			"password": "$2a$10$EjOuZxBDf0vQDGgfEFdarub5dOVymAfjHYpGsOYDAQNrIvciAQmtC",
-			"firstname": "Thanh",
-			"lastname": "Hải",
-			"role": "user",
-			"id": 3
 		}
 	],
 	"Category": [
@@ -905,6 +899,15 @@
 			"datetime": "2021-08-20 10:35:30",
 			"rate": 5,
 			"id": 2
+		},
+		{
+			"title": "0",
+			"content": "1",
+			"idProduct": "5",
+			"name": "Luu Van Trung Hieu (FGW DN)",
+			"datetime": "2021-08-21 21:29:39",
+			"rate": 3,
+			"id": 3
 		}
 	]
 }
