@@ -1,7 +1,7 @@
 /** @format */
 
 import { Avatar } from '@material-ui/core';
-import { Col, Menu } from 'antd';
+import { Col } from 'antd';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -41,19 +41,6 @@ export default function UserSidebar() {
 							</Link>
 						</li>
 					))}
-
-					{/* <li className='user-side__option-item'>
-						<Link to='/profile/purchase' className='item__link'>
-							<BiPurchaseTag className='item__link-icon' />
-							{t('Profile.account.order-history')}
-						</Link>
-					</li>
-					<li className='user-side__option-item'>
-						<Link to='profile/password' className='item__link'>
-							<RiLockPasswordLine className='item__link-icon' />
-							{t('Profile.account.change-pass')}
-						</Link>
-					</li> */}
 				</ul>
 			</div>
 		</Col>

@@ -35,7 +35,16 @@
 	"isExist": "Sản phẩm đã được tồn tại trong danh sách yêu thích",
 	"wish": "Thêm sản phẩm vào danh sách yêu thích thành công",
 	"wish-empty": "Danh sách yêu thích của bạn hiện đang trống!",
-
+	"product": "Sản phẩm",
+	"category": "Danh mục sản phẩm",
+	"user": "Danh sách người dùng",
+	"manage-product": "Quản lý sản phẩm",
+	"add-product": "Thêm sản phẩm mới",
+	"manage-category": "Quản lý danh mục",
+	"add-category": "Thêm danh mục mới",
+	"manage-user": "Quản lý người dùng",
+	"continue": "Tiếp tục",
+	"cart-return": "Quay lại giỏ hàng",
 	"Categories": {
 		"Title": "Danh mục sản phẩm",
 		"Top_Categories": {
@@ -378,7 +387,7 @@
 	},
 	"success": {
 		"Order Success": "Đặt hàng thành công",
-		"Thanks": "Cảm ơn bạn đã cho Vegist cơ hội được phục vụ. Vui lòng theo dõi bằng cách nhấp vào",
+		"Thanks": "Chúc mừng, bạn đã đặt hàng thành công!. Vui lòng theo dõi bằng cách nhấp vào",
 		"Order Management": "Quản lý đơn hàng",
 		"Order": "Đơn hàng",
 		"Receiver": "Người nhận",

@@ -31,6 +31,16 @@
 	"isExist": "The product already exists in the wishlist",
 	"wish": "Successfully added product to wishlist",
 	"wish-empty": "Your's wish list is currently empty!",
+	"product": "Products",
+	"category": "Categories",
+	"manage-product": "Manage Products",
+	"add-product": "Add New Product",
+	"manage-category": "Manage Categories",
+	"add-category": "Add New Category",
+	"manage-user": "Manage Users",
+	"user": "Users",
+	"continue": "Continue",
+	"cart-return": "Return to Cart",
 	"Categories": {
 		"Title": "Category",
 		"Top_Categories": {
@@ -294,7 +304,7 @@
 		"profile-text": "Manage profile information for account security",
 		"update-success": "Updated profile successfully",
 		"update-password": "Updated password successfully",
-		"update-password-fail":"Password does not match",
+		"update-password-fail": "Password does not match",
 		"change-password": "Change password",
 		"pass-text": "For account security, please do not share your password with others",
 		"account": {
@@ -376,7 +386,7 @@
 	},
 	"success": {
 		"Order Success": "Order Success",
-		"Thanks": "Thank you for giving Vegist the opportunity to serve. Please follow by clicking",
+		"Thanks": "Congratulations on your successful order. Please follow by clicking",
 		"Order Management": "Order Management",
 		"Order": "Order",
 		"Receiver": "Receiver",

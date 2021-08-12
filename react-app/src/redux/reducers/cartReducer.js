@@ -67,6 +67,13 @@ export const cartReducer = (state = cartState, action) => {
 			}
 			return { ...state };
 		}
+		case Types.REMOVE_CART: {
+			state = { ...state, cartData: [], cartNumber: 0, totalCost: 0 };
+			localStorage.removeItem('productCart');
+
+			return { ...state };
+		}
+
 		default:
 			return state;
 	}

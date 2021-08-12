@@ -2,13 +2,14 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
-function PrivateLayout({ component: Component, ...props }) {
+import HomeAdmin from '../pages/Admin';
+function PrivateLayout({ children }) {
 	const users = useSelector((state) => state.auth.authData);
 
 	return users?.user?.role === 'admin' ? (
-		<Route {...props} render={(routerProps) => <Component {...routerProps} />} />
+		<HomeAdmin>{children}</HomeAdmin>
 	) : (
 		<Redirect to='/'>
 			{toast.warning("You don't have permission to access this page", {

@@ -8,6 +8,7 @@ import { orderReducer } from './orderReducer';
 import productReducer from './productReducer';
 import categoryReducer from './categoryReducer';
 import { productDetailReducer } from './productDetail.reducer';
+
 import { wishListReducer } from './wishlist.reducer';
 
 const rootReducer = combineReducers({
