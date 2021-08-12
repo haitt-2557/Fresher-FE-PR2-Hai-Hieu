@@ -73,7 +73,9 @@
 		"button register": "ĐĂNG NHẬP",
 		"already": "Chưa có tài khoản ?",
 		"button login": "Tạo tài khoản",
-		"forgot": "Bạn đã quên mật khẩu ?"
+		"forgot": "Bạn đã quên mật khẩu ?",
+		"or": "Hoặc đăng nhập với",
+		"google": "Đăng nhập với tài khoản Google"
 	},
 	"Terms & Conditions": {
 		"title": "Điều khoản và điều kiện",
@@ -140,6 +142,10 @@
 	},
 
 	"home": {
+		"SearchText": "Tìm kiếm",
+		"SupportText": "Hỗ trợ 24/7",
+		"SearchInput": "Bạn muốn tìm gì?",
+		"AllCategories": "Danh mục sản phẩm",
 		"banner": {
 			"shop now": "mua sắm ngay",
 			"fresh fruit vegetable": "Trái cây tươi, rau ",

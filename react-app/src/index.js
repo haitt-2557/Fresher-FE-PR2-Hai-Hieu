@@ -8,6 +8,7 @@ import App from './App';
 import i18n from './i18n';
 import store from './redux/store';
 import 'antd/dist/antd.css';
+import './assets/scss/index.scss';
 ReactDOM.render(
 	<Provider store={store}>
 		<I18nextProvider i18n={i18n}>
