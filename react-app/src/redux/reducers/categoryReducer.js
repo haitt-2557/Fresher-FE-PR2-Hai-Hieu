@@ -1,11 +1,6 @@
 /** @format */
 
-import {
-	GET_CATEGORY_FAIL,
-	GET_CATEGORY_SUCCESS,
-	GET_SIDEBAR_FAIL,
-	GET_SIDEBAR_SUCCESS,
-} from '../constants';
+import { GET_CATEGORY_FAIL, GET_CATEGORY_SUCCESS, GET_SIDEBAR_FAIL, GET_SIDEBAR_SUCCESS } from '../constants';
 
 const initialState = {
 	categoryData: [],

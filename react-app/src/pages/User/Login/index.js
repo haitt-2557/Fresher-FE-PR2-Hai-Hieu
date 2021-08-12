@@ -126,9 +126,7 @@ export default function Login() {
 										<Button
 											className='form-login__btn'
 											onClick={renderProps.onClick}
-											icon={
-												<GrGooglePlus className='form-login__btn--icon' />
-											}>
+											icon={<GrGooglePlus className='form-login__btn--icon' />}>
 											{t('login.google')}
 										</Button>
 									</Form.Item>
@@ -145,9 +143,7 @@ export default function Login() {
 									span: 20,
 								}}>
 								<Link to='/register'>
-									<Typography style={{ float: 'right' }}>{`${t(
-										'login.already',
-									)} Sign Up`}</Typography>
+									<Typography style={{ float: 'right' }}>{`${t('login.already')} Sign Up`}</Typography>
 								</Link>
 							</Form.Item>
 						</Form>

@@ -1,0 +1,61 @@
+/** @format */
+@import '../../../assets/scss/index.scss';
+.product-banner {
+	background-image: url('../../../assets/images/breadcrumb.jpg');
+	padding: 2.5rem 0;
+	margin-top: 2rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	color: $text-white;
+	font-size: 2rem;
+
+	&__title {
+		color: $text-white;
+		margin-bottom: 1rem;
+		font-size: 5rem;
+		text-transform: capitalize;
+		font-weight: 800;
+	}
+}
+.product {
+	padding: 6rem 0;
+
+	&__main {
+		&-title {
+			font-size: 2.8rem;
+			font-weight: 800;
+			padding: 1rem 1.6rem;
+			text-transform: capitalize;
+		}
+		&-sale {
+			padding-bottom: 7rem;
+			border-bottom: 1px solid $border-color;
+		}
+
+		&-list {
+			padding-top: 3rem;
+
+			.list__product {
+				padding-bottom: 3rem;
+			}
+			.list__notFound {
+				display: block;
+				margin: 0 auto;
+			}
+			.list__filter {
+				@include flex-box(center, space-between);
+				padding: 2.5rem 0;
+				font-size: 1.6rem;
+
+				&-sort span {
+					margin-right: 1rem;
+				}
+				&-result {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}

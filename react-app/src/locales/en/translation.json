@@ -22,7 +22,12 @@
 	"Add cart success": "Add cart success",
 	"Checkout": "Checkout",
 	"Shoping Cart": "Shoping Cart",
+	"All Product": "All Product",
+	"Rating": "Rating",
+	"price": "Price",
+	"sale": "Sale Off",
 	"Categories": {
+		"Title": "Category",
 		"Top_Categories": {
 			"name": "Top Categories",
 			"Fruits": "Fruits",
@@ -146,7 +151,9 @@
 			"fresh fruit vegetable": "Fresh fruit,vegetable ",
 			"on our product": "On our product",
 			"Vegetable Eggplant": "Vegetable Eggplant ",
-			"100% Fresh food": "100% Fresh food"
+			"100% Fresh food": "100% Fresh food",
+			"Banner": "Organi Shop",
+			"Banner-bread": "Home - Shop"
 		},
 
 		"countdown": {
@@ -173,23 +180,9 @@
 			"title": "Shop By Category"
 		}
 	},
-	"category": {
-		"Baker's Rack": "Baker's Rack",
-		"Breakfast": "Breakfast",
-		"Dairy & Chesse": "Dairy & Chesse",
-		"Dinner": "Dinner",
-		"Featured Product": "Featured Product",
-		"Fresh Fruits": "Fresh Fruits ",
-		"Fresh Meat": "Fresh Meat ",
-		"Fresh Vegetable": "Fresh Vegetable",
-		"Green Seafood": "Green Seafood",
-		"New Product": "New Product",
-		"Sea & Fish": "Sea & Fish",
-		"Organic Juice": "Organic Juice ",
-		"Organic Dryfruit": "Organic Dryfruit"
-	},
 
 	"tags": {
+		"Tag": "Tags",
 		"Almond": "Almond",
 		"banana": "banana",
 		"bitrrot": "bitrrot",
@@ -218,7 +211,8 @@
 		"placeholder": "Select a type",
 		"Anything...": "Anything...",
 		"Organic Juice ": "Organic Juice ",
-		"Organic Dryfruit": "Organic Dryfruit"
+		"Organic Dryfruit": "Organic Dryfruit",
+		"found": "Products found"
 	},
 
 	"productDetail": {
@@ -421,5 +415,20 @@
 		"Text": "Get E-mail updates about our latest shop and special offers.",
 		"Placeholder": "Enter your email",
 		"Subcribe_btn": "Subscribe"
+	},
+	"Product_Category": {
+		"Baker's Rack": "Baker's Rack",
+		"Breakfast": "Breakfast",
+		"Dairy & Chesse": "Dairy & Chesse",
+		"Dinner": "Dinner",
+		"Featured Product": "Featured Product",
+		"Fresh Fruits": "Fresh Fruits ",
+		"Fresh Meat": "Fresh Meat ",
+		"Fresh Vegetable": "Fresh Vegetable",
+		"Green Seafood": "Green Seafood",
+		"New Product": "New Product",
+		"Sea & Fish": "Sea & Fish",
+		"Organic Juice": "Organic Juice ",
+		"Organic Dryfruit": "Organic Dryfruit"
 	}
 }

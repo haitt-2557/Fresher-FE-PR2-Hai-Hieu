@@ -17,7 +17,7 @@ import {
 
 const apiURL = 'http://localhost:4000';
 
-function* getProductHomeSaga() {
+function* getProductHomeSaga(action) {
 	try {
 		const responseNew = yield axios({
 			method: 'GET',
@@ -68,10 +68,10 @@ function* getProductSaga(action) {
 			},
 		});
 		const data = response.data;
-		console.log(data);
+
 		yield put({
 			type: GET_PRODUCTS_SUCCESS,
-			payload: data,
+			payload: { product: data, params: action.payload },
 		});
 	} catch (error) {
 		yield put({
