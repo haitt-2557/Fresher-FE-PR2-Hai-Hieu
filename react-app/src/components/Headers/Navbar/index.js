@@ -3,22 +3,18 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useHistory, Link } from 'react-router-dom';
+import { Avatar, Typography } from '@material-ui/core';
 import { FiMenu } from 'react-icons/fi';
 import logo from '../../../assets/images/logo.png';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Menu, Drawer, Button } from 'antd';
+import { Menu, Drawer, Dropdown, Button } from 'antd';
 import './style.scss';
 import { Select } from 'antd';
 import Vietnam from '../../../assets/images/vi.svg';
 import English from '../../../assets/images/en.svg';
 import PersonIcon from '@material-ui/icons/Person';
-import {
-	MinusOutlined,
-	PlusOutlined,
-	DeleteOutlined,
-	ShoppingCartOutlined,
-} from '@ant-design/icons';
+import { MinusOutlined, PlusOutlined, DeleteOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import product from '../../../assets/images/cat-4.jpg';
 const { Option } = Select;
 const navbarData = [
@@ -65,7 +61,7 @@ const navbarData = [
 	},
 ];
 
-export default function Navbar({ onChange }) {
+export default function Navbar({ onChange, users, userExpand }) {
 	const { t } = useTranslation();
 	const location = useLocation();
 	const [visible, setVisible] = useState(false);
@@ -74,23 +70,16 @@ export default function Navbar({ onChange }) {
 	const menu = (data) => {
 		return data.map((item, index) =>
 			!item.dropdown ? (
-				<Link
-					to={item.path}
-					key={index + 1}
-					className={
-						location.pathname === item.path
-							? 'navbar__menu-item active'
-							: 'navbar__menu-item'
-					}>
+				<Link to={item.path} key={`item-${index + 5}`} className={location.pathname === item.path ? 'navbar__menu-item active' : 'navbar__menu-item'}>
 					{t(item.name)}
 				</Link>
 			) : (
-				<span className='navbar__menu-item navbar__menu-item--hasChild'>
+				<span className='navbar__menu-item navbar__menu-item--hasChild' key={`key+${index}`}>
 					{t(item.name)}
 					<Menu className='drop__menu'>
 						{item.dropdown.map((drop, index) => (
-							<Menu.Item key={drop.id + 1}>
-								<Link to={drop.path} className='drop__menu-link'>
+							<Menu.Item key={`drop-${drop.id + 1 + index}`}>
+								<Link to={drop.path} className='drop__menu-link' key={`item-${index}`}>
 									{t(drop.name)}
 								</Link>
 							</Menu.Item>
@@ -105,23 +94,16 @@ export default function Navbar({ onChange }) {
 			<div className='menu__item'>
 				{data.map((item, index) =>
 					!item.dropdown ? (
-						<Link
-							to={item.path}
-							key={index + 1}
-							className={
-								location.pathname === item.path
-									? 'menu__item-link active'
-									: 'menu__item-link'
-							}>
+						<Link to={item.path} key={`link-${index + 1}`} className={location.pathname === item.path ? 'menu__item-link active' : 'menu__item-link'}>
 							{t(item.name)}
 						</Link>
 					) : (
-						<span className='menu__item-link menu__item-link--hasChild'>
+						<span className='menu__item-link menu__item-link--hasChild' key={`key+${index + 1}`}>
 							{item.name}
 							<Menu className='menu__item-drop'>
 								{item.dropdown.map((drop, index) => (
-									<Menu.Item key={drop.id + 1}>
-										<Link to={drop.path} className='drop__link'>
+									<Menu.Item key={`menu-${drop.id + 1 + index}`}>
+										<Link to={drop.path} className='drop__link' key={index * 2 + 10}>
 											{t(drop.name)}
 										</Link>
 									</Menu.Item>
@@ -160,21 +142,10 @@ export default function Navbar({ onChange }) {
 					<div className='icon__cart site-drawer-render-in-current-wrapper'>
 						<ShoppingCartIcon className='icon__cart-icon' onClick={onShowDrawer} />
 						<span className='icon__cart-number'>1</span>
-						<Drawer
-							title={t('Cart')}
-							width={360}
-							placement='right'
-							closable={false}
-							onClose={onClose}
-							visible={visible}
-							getContainer={false}>
+						<Drawer title={t('Cart')} width={360} placement='right' closable={false} onClose={onClose} visible={visible} getContainer={false}>
 							<div className='cart-drawer'>
 								<div className='cart-drawer__product'>
-									<img
-										src={product}
-										alt='Product'
-										className='cart-drawer__product-img'
-									/>
+									<img src={product} alt='Product' className='cart-drawer__product-img' />
 									<div className='cart-drawer__product-desc'>
 										<h3 className='desc__title'>Milk</h3>
 										<span className='desc__price'>$169</span>
@@ -189,17 +160,11 @@ export default function Navbar({ onChange }) {
 							</div>
 							<div className='drawer-footer'>
 								<div className='drawer-footer__total'>
-									<span className='drawer-footer__total-text'>
-										{t('cart.Total')}
-									</span>
+									<span className='drawer-footer__total-text'>{t('cart.Total')}</span>
 									<span className='drawer-footer__total-price'>$169.00</span>
 								</div>
 								<Link to='/cart' onClick={onClose}>
-									<Button
-										shape='round'
-										icon={<ShoppingCartOutlined />}
-										size='large'
-										className='drawer-footer__btn'>
+									<Button shape='round' icon={<ShoppingCartOutlined />} size='large' className='drawer-footer__btn'>
 										{t('Cart')}
 									</Button>
 								</Link>
@@ -212,13 +177,7 @@ export default function Navbar({ onChange }) {
 				<div className='navbar__mobile' onClick={onShowMobile}>
 					<FiMenu />
 				</div>
-				<Drawer
-					width={320}
-					placement='left'
-					closable={false}
-					onClose={onCloseMobile}
-					visible={visibleMobile}
-					getContainer={false}>
+				<Drawer width={320} placement='left' closable={false} onClose={onCloseMobile} visible={visibleMobile} getContainer={false}>
 					<div className='navbar__mobile-logo'>
 						<img src={logo} alt='logo' />
 					</div>
@@ -234,10 +193,25 @@ export default function Navbar({ onChange }) {
 							</Option>
 						</Select>
 						<div className='user__info'>
-							<PersonIcon />
-							<Link to='/login' className='user__info-btn' onClick={onCloseMobile}>
-								{t('Login')}
-							</Link>
+							{!users?.user ? (
+								<>
+									<PersonIcon />
+									<Link to='/login' className='user__info-btn' onClick={onCloseMobile}>
+										{t('Login')}
+									</Link>
+								</>
+							) : (
+								<div className='user__infor'>
+									<Avatar className='user__infor-avatar' src={users?.user.imageUrl} alt={users?.user.name ? users.user.name : users?.user?.firstname + ' ' + users?.user?.lastname}>
+										{users.user.name ? users.user.name.charAt(0) : (users?.user?.firstname + ' ' + users?.user?.lastname).charAt(0)}
+									</Avatar>
+									<Dropdown overlay={userExpand}>
+										<Typography className='user__infor-name' variant='h5'>
+											{users?.user.name ? users.user.name : users?.user?.firstname + ' ' + users?.user?.lastname}
+										</Typography>
+									</Dropdown>
+								</div>
+							)}
 						</div>
 					</div>
 					<div className='navbar__mobile-menu'>{menuMobile(navbarData)}</div>

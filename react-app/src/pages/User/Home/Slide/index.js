@@ -10,7 +10,7 @@ import './style.scss';
 import { Col, Row } from 'antd';
 import useWindowDimensions from '../../../../utils/index';
 
-const Slide = ({ data, type, xl, lg, md, sm, xs }) => {
+const Slide = ({ data, type, xl, lg, md, sm, xs, page }) => {
 	const { width } = useWindowDimensions();
 
 	const slidesToShow = () => {
@@ -22,21 +22,22 @@ const Slide = ({ data, type, xl, lg, md, sm, xs }) => {
 	};
 
 	const settings = {
-		dots: type === 'slideShow' ? true : false,
+		dots: type === 'slideShow' || page === 'product' ? true : false,
 		infinite: true,
 		speed: type === 'slideShow' ? 1000 : 800,
 		slidesToShow: type === 'slideShow' ? 1 : slidesToShow(),
 		slidesToScroll: 1,
-		autoplay: false,
+		autoplay: true,
 		swipe: true,
 		arrows: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 3500,
 		cssEase: 'ease-in-out',
+		centerPadding: '10px',
 	};
 
 	const slideShow = (item, index) => {
 		return (
-			<div>
+			<div key={1}>
 				<div
 					className='slideShow__img'
 					style={{ backgroundImage: `url(${item.img})` }}
@@ -56,7 +57,7 @@ const Slide = ({ data, type, xl, lg, md, sm, xs }) => {
 	const slideCategory = (item, index) => {
 		return (
 			<div className='slide-category__item' key={`category-${item.id}`}>
-				<a href='#' className='slide-category__img'>
+				<a href='/' className='slide-category__img'>
 					<img src={item.img} alt='anh category'></img>
 				</a>
 				<div className='slide-category__content'>
@@ -66,24 +67,44 @@ const Slide = ({ data, type, xl, lg, md, sm, xs }) => {
 		);
 	};
 
-	const slideProduct = (data) => {
+	const slideProduct = (data, currentPage) => {
 		let tempArr = [];
 		for (let i = 0; i < data?.length; i += 2) {
 			const carouselContent = data.slice(i, i + 2);
 
 			carouselContent.length === 2 && tempArr.push(carouselContent);
 		}
-		return tempArr.map((element, index) => (
-			<Col sm={24} key={`col-${element.id}-${index}`}>
-				{element.map((item) => (
-					<Row key={`row-${item.id}`}>
-						<Col sm={24} className='slide-product__col'>
+		if (currentPage && currentPage === 'product') {
+			return tempArr.map((element, index) =>
+				element.map((item) => (
+					<Row key={`row-${item.id}`} gutter={[16, 16]}>
+						<Col
+							sm={24}
+							className='slide-product__col'
+							key={`col-${element.id}-${index}`}>
 							<ProductItem data={item}> </ProductItem>
 						</Col>
 					</Row>
-				))}
-			</Col>
-		));
+				)),
+			);
+		} else {
+			return tempArr.map((element, index) => (
+				<Row key={`row-${element.id}-${index}`} gutter={[16, 16]}>
+					<Col sm={24} key={`col-${index}+1`}>
+						{element.map((item, index) => (
+							<Row key={`rows-${item.id} + ${index}`} gutter={[16, 16]}>
+								<Col
+									sm={24}
+									className='slide-product__col'
+									key={`col-child-${item.id}-${index + 1}`}>
+									<ProductItem data={item}> </ProductItem>
+								</Col>
+							</Row>
+						))}
+					</Col>
+				</Row>
+			));
+		}
 	};
 
 	return (
@@ -102,7 +123,7 @@ const Slide = ({ data, type, xl, lg, md, sm, xs }) => {
 								? slideShow(item, index)
 								: slideCategory(item, index),
 					  )
-					: slideProduct(data)}
+					: slideProduct(data, page)}
 			</Slider>
 		</div>
 	);

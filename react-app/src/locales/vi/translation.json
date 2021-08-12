@@ -26,7 +26,12 @@
 	"Add card success": "Thêm vào giỏ hàng thành công",
 	"Checkout": "Thanh toán",
 	"Shoping Cart": "Giỏ hàng",
+	"All Product": "Tất cả sản phẩm",
+	"Rating": "Xếp hạng",
+	"price": "Giá tiền",
+	"sale": "giảm giá",
 	"Categories": {
+		"Title": "Danh mục sản phẩm",
 		"Top_Categories": {
 			"name": "Danh mục hàng đầu",
 			"Fruits": "Trái cây",
@@ -151,7 +156,9 @@
 			"fresh fruit vegetable": "Trái cây tươi, rau ",
 			"on our product": "Trên sản phẩm của chúng tôi",
 			"Vegetable Eggplant": "Rau cà tím ",
-			"100% Fresh food": "100% thực phẩm tươi"
+			"100% Fresh food": "100% thực phẩm tươi",
+			"Banner": "Cửa hàng Organi",
+			"Banner-bread": "Trang chủ - Của hàng"
 		},
 
 		"countdown": {
@@ -178,22 +185,9 @@
 			"title": "Cửa hàng theo thể loại"
 		}
 	},
-	"category": {
-		"Baker's Rack": "Baker's Rack",
-		"Breakfast": "Bữa ăn sáng",
-		"Dairy & Chesse": "Sữa & Phô mai",
-		"Dinner": "Bữa tối",
-		"Featured Product": "Sản phẩm nổi bật",
-		"Fresh Fruits": "Trái cây tươi ",
-		"Fresh Meat": "Thịt tươi sống ",
-		"Fresh Vegetable": "Rau quả tươi",
-		"Green Seafood": "Hải sản xanh",
-		"New Product": "Sản phẩm mới",
-		"Sea & Fish": "Cá biển",
-		"Organic Juice ": "Nước trái cây ",
-		"Organic Dryfruit": "Quả khô hữu cơ"
-	},
+
 	"tags": {
+		"Tag": "Tags",
 		"Almond": "Hạnh nhân",
 		"banana": "chuối",
 		"bitrrot": "cà rốt",
@@ -220,7 +214,8 @@
 		"of": "trên",
 		"result": "kết quả",
 		"placeholder": "Chọn một loại",
-		"Anything...": "Bất cứ thứ gì..."
+		"Anything...": "Bất cứ thứ gì...",
+		"found": "Sản phẩm tìm thấy"
 	},
 	"productDetail": {
 		"Review": "Viết đánh giá",
@@ -413,5 +408,20 @@
 		"Subcribe": "Tham gia để nhận thông tin ngây bây giờ",
 		"Subcribe_btn": "Đăng ký",
 		"Text": "Nhận thông tin cập nhật qua Email những thông mới nhất về cửa hàng của chúng tôi và các ưu đãi đặc biệt."
+	},
+	"Product_Category": {
+		"Baker's Rack": "Baker's Rack",
+		"Breakfast": "Bữa ăn sáng",
+		"Dairy & Chesse": "Sữa & Phô mai",
+		"Dinner": "Bữa tối",
+		"Featured Product": "Sản phẩm nổi bật",
+		"Fresh Fruits": "Trái cây tươi ",
+		"Fresh Meat": "Thịt tươi sống ",
+		"Fresh Vegetable": "Rau quả tươi",
+		"Green Seafood": "Hải sản xanh",
+		"New Product": "Sản phẩm mới",
+		"Sea & Fish": "Cá biển",
+		"Organic Juice": "Nước trái cây",
+		"Organic Dryfruit": "Quả khô hữu cơ"
 	}
 }
