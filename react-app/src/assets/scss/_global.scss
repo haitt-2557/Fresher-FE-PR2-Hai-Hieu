@@ -126,3 +126,26 @@ input {
 .text-clamp--5 {
 	-webkit-line-clamp: 5;
 }
+
+.section-title {
+	margin-bottom: 50px;
+	text-align: center;
+
+	h2 {
+		color: $black;
+		font-weight: 700;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			bottom: -15px;
+			right: 0;
+			height: 4px;
+			width: 80px;
+			background: $primary-color;
+			content: '';
+			margin: 0 auto;
+		}
+	}
+}

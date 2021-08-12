@@ -8,6 +8,22 @@
 			"role": "user",
 			"id": 1,
 			"description": ""
+		},
+		{
+			"email": "truongthanhhai283@gmail.com",
+			"password": "$2a$10$GB6SK9aWuJUFlyN1uWcOx.2zjEEbnxode9V0uySOd1GqEbafdc7Mq",
+			"firstname": "Truong Thanh",
+			"lastname": "Hai",
+			"role": "user",
+			"id": 2
+		},
+		{
+			"email": "hai@gmail.com",
+			"password": "$2a$10$EjOuZxBDf0vQDGgfEFdarub5dOVymAfjHYpGsOYDAQNrIvciAQmtC",
+			"firstname": "Thanh",
+			"lastname": "Hải",
+			"role": "user",
+			"id": 3
 		}
 	],
 	"Category": [
@@ -869,6 +885,26 @@
 			"news": true,
 			"tagId": 3,
 			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
+		}
+	],
+	"listComment": [
+		{
+			"title": "1",
+			"content": "1",
+			"idProduct": "3",
+			"name": "Lưu Hiếu",
+			"datetime": "2021-08-19 12:53:14",
+			"rate": 1,
+			"id": 1
+		},
+		{
+			"title": "good",
+			"content": "very good",
+			"idProduct": "1",
+			"name": "Thanh Hải",
+			"datetime": "2021-08-20 10:35:30",
+			"rate": 5,
+			"id": 2
 		}
 	]
 }
