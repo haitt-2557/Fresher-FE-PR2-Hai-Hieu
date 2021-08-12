@@ -1,24 +1,20 @@
 /** @format */
 
 import React from 'react';
-import { Input, Row, Badge, Avatar } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
+import { Input, Badge, Avatar } from 'antd';
+import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { Typography, Space } from 'antd';
+import { Typography } from 'antd';
 
-import { ClockCircleOutlined } from '@ant-design/icons';
 import './styles.scss';
-const { Text, Link } = Typography;
+const { Text } = Typography;
 
 const InfoCart = () => {
-	const dispatch = useDispatch();
 	const product = useSelector((state) => state.cart);
 	const data = product.cartData.map((item) => {
 		return { ...item, total: (item.newPrice * item.quantity).toLocaleString('vi-VN') };
 	});
 	const location = useLocation();
-	const user = localStorage.getItem('profile');
-
 	const renderCartData = (data) => {
 		return data.map((item, index) => (
 			<tr className='infoCart__cart--item'>

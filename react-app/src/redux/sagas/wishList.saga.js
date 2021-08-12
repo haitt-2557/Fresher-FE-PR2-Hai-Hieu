@@ -4,10 +4,9 @@ import { toast } from 'react-toastify';
 import { Types } from '../constants/wishlist.constant';
 import * as API from '../../api/index';
 import { put, takeLeading } from 'redux-saga/effects';
-
-const userInfo = JSON.parse(localStorage.getItem('profile'));
-let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
 function* addToWishList(action) {
+	const userInfo = JSON.parse(localStorage.getItem('profile'));
+	let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 	let isExist = false;
 	const product = action.payload;
 
@@ -45,6 +44,8 @@ function* addToWishList(action) {
 	}
 }
 function* removeWishList(action) {
+	const userInfo = JSON.parse(localStorage.getItem('profile'));
+	let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 	try {
 		const index = wishlist.findIndex((item) => item.id === action.payload.id);
 		wishlist.splice(index, 1);

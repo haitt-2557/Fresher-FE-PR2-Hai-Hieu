@@ -1,10 +1,10 @@
 /** @format */
 
 import { Types } from '../constants/wishlist.constant';
-const wishlist = JSON.parse(localStorage.getItem('wishlist'));
+
 const wishState = {
-	numberWishList: wishlist ? wishlist.length : 0,
-	wishList: wishlist ? wishlist : [],
+	numberWishList: 0,
+	wishList: [],
 };
 export const wishListReducer = (state = wishState, action) => {
 	switch (action.type) {

@@ -1,13 +1,11 @@
 /** @format */
 
-import { Col, Menu, Layout } from 'antd';
+import { Menu, Layout } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/images/logo.png';
 import { BiFoodMenu } from 'react-icons/bi';
 import { AiFillDatabase } from 'react-icons/ai';
 import { HiUsers } from 'react-icons/hi';
-import { SiIfood } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 const { Sider } = Layout;
 const { SubMenu } = Menu;

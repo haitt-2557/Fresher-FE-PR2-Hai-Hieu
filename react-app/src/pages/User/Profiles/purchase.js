@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Col, Row, Table, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
 import UserSidebar from '../../../components/User/sidebar';

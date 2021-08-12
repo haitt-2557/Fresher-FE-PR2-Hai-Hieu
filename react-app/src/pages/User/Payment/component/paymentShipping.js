@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import PaymentBreadcrumb from '../component/PaymentBreadcrumb';
 import { Radio } from 'antd';

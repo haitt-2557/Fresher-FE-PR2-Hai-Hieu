@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { Slider, Menu } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProducts, getSidebar, getTotalProducts } from '../../redux/actions';
+import { getProducts, getSidebar } from '../../redux/actions';
 import './style.scss';
 export default function Sidebar() {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	useEffect(() => {
-		dispatch(getSidebar({ }));
+		dispatch(getSidebar({}));
 	}, [dispatch]);
 	const [price, setPrice] = useState([10000, 200000]);
 	const [index, setIndex] = useState(false);

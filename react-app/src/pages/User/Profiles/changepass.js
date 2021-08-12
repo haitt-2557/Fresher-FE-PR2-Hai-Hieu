@@ -10,11 +10,9 @@ import './style.scss';
 import { updateProfile } from '../../../redux/actions/authAction';
 import { toast } from 'react-toastify';
 import * as API from '../../../api';
-import { useHistory } from 'react-router-dom';
 
 export default function Changepass() {
 	const dispatch = useDispatch();
-	const history = useHistory();
 	const { t } = useTranslation();
 	const [form] = Form.useForm();
 	const [userInfo, setUserInfo] = useState({});

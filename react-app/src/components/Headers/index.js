@@ -18,7 +18,7 @@ import './styles.scss';
 import Navbar from './Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { PhoneOutlined } from '@ant-design/icons';
-import { getProducts, getTotalProducts } from '../../redux/actions';
+import { getProducts } from '../../redux/actions';
 const { Option } = Select;
 
 export default function Header() {

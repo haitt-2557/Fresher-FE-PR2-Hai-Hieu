@@ -1,10 +1,9 @@
 /** @format */
 
-import { put, takeEvery, takeLeading } from 'redux-saga/effects';
+import { put, takeLeading } from 'redux-saga/effects';
 import * as API from '../../api/index';
 import { toast } from 'react-toastify';
 import { Types } from '../constants/auth.constant';
-import { Redirect } from 'react-router';
 const user = JSON.parse(localStorage.getItem('profile'));
 function* loginSaga(action) {
 	try {

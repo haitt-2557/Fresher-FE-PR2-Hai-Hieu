@@ -1,10 +1,10 @@
+/** @format */
+
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import { Row, Col } from 'antd';
 import { toast } from 'react-toastify';
 import Footer from '../components/Footer';
 import Header from '../components/Headers';
-import InfoCart from '../components/InfoCart';
 import { Container } from '@material-ui/core';
 function PaymentLayout({ component: Component, ...props }) {
 	const users = localStorage.getItem('profile');

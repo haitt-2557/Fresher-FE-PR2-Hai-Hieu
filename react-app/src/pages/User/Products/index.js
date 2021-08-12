@@ -5,8 +5,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../../../components/ProductItem/index';
-import { getProducts, getTotalProducts, getProductHome } from '../../../redux/actions';
-import { CHANGE_PAGE } from '../../../redux/constants';
+import { getProducts, getProductHome } from '../../../redux/actions';
 import Slide from '../Home/Slide';
 import Sidebar from '../../../components/Sidebar/index';
 import noProduct from '../../../assets/images/no-product.jpg';
@@ -30,13 +29,6 @@ export default function Product() {
 		dispatch(getProductHome({}));
 	}, [dispatch]);
 	const handleChangePage = async (currentPage, currentSize) => {
-		// const product = productTotal.slice(currentPage * currentSize - currentSize, currentPage * currentSize);
-		// const payload = {
-		// 	product: product,
-		// 	currentPage: currentPage,
-		// 	limit: currentSize,
-		// };
-		// dispatch({ type: CHANGE_PAGE, payload: payload });
 		dispatch(getProducts({ page: currentPage, limit: currentSize }));
 	};
 	const handleChangeSort = (value) => {

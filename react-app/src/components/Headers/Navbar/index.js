@@ -21,7 +21,7 @@ import { updateCart, deleteCart } from '../../../redux/actions/cart.action';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { deleteWish } from '../../../redux/actions/wishlist.action';
-import * as API from '../../../api';
+import { getInfo } from '../../../redux/actions/account.action';
 
 const { Option } = Select;
 const navbarData = [
@@ -76,7 +76,7 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const [isWishList, setIsWishList] = useState(false);
 	const productCart = useSelector((state) => state.cart);
 	const wish_list = useSelector((state) => state.wish);
-	const [userInfo, setUserInfo] = useState({});
+	const userInfo = useSelector((state) => state.accountReducer.infoUser);
 	const dispatch = useDispatch();
 	const handleUpQuantity = (item) => {
 		const type = 'increase';
@@ -92,14 +92,10 @@ export default function Navbar({ onChange, users, userExpand }) {
 	};
 
 	useEffect(() => {
-		async function getUserInfo() {
-			if (users && users.user?.role === 'user') {
-				const { data } = await API.getUserInfo(users?.user?.id);
-				setUserInfo(data);
-			}
+		if (users !== null && users?.user?.role === 'user') {
+			dispatch(getInfo({ id: users?.user?.id }));
 		}
-		getUserInfo();
-	}, [users, wish_list]);
+	}, [dispatch, users, wish_list]);
 
 	const menu = (data) => {
 		return data.map((item, index) =>
