@@ -1,0 +1,32 @@
+/** @format */
+@import '../../../assets/scss/index.scss';
+.ant-form.login-form {
+	padding: 3rem 6rem;
+	margin: 2rem 0;
+	font-size: 1.5rem;
+	border: 1px solid $border-color;
+	border-radius: 0.5rem;
+}
+
+.login-form {
+	&__icon {
+		text-align: center;
+		font-size: 3rem;
+	}
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+	.form-login__btn {
+		width: 100%;
+		border-radius: 5rem;
+		border-color: $primary-color;
+		@include flex-box(center, center);
+		padding: 1.8rem;
+		&--icon {
+			font-size: 1.6rem;
+			margin-right: 1rem;
+		}
+	}
+}

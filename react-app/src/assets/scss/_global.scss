@@ -1,0 +1,127 @@
+/** @format */
+@import './variable';
+html {
+	font-size: 62.5% !important;
+	font-family: $primary-font !important;
+}
+*,
+*:after,
+*::before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.ant-btn {
+	text-transform: uppercase;
+	background-color: $primary-color;
+	color: $text-white;
+	font-weight: 600;
+	border-radius: 0.5rem;
+	border-color: $primary-color;
+}
+
+.button-primary {
+	text-transform: uppercase;
+	background-color: $primary-color;
+	color: $white;
+	border: 2px solid $primary-color;
+	font-weight: 600;
+	&:hover {
+		background-color: unset;
+		color: $black;
+	}
+}
+
+.button-transparent {
+	text-transform: uppercase;
+	background-color: unset;
+	color: #949494;
+	border: 2px solid transparent;
+	font-weight: 600;
+
+	&:hover {
+		border-color: $primary-color;
+		color: $primary-color;
+	}
+}
+
+.button-white {
+	text-transform: uppercase;
+	background-color: $white;
+	color: $green !important;
+	border: 1px $green solid;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+	border: none;
+	outline: none !important;
+	background-color: transparent;
+	font-family: 'Poppins', sans-serif;
+}
+
+.icon {
+	@include flex-box(center, center);
+	cursor: pointer;
+}
+.icon-round {
+	@include square(4rem, 50%);
+	border: 1px #dddcdc solid;
+	width: 5rem !important;
+	height: 5rem !important;
+	&:hover {
+		svg {
+			transform: rotate(360deg);
+			transition: all 0.8s ease;
+		}
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+	}
+	@include desktop {
+		@include square(3rem, 50%);
+		font-size: 1.4rem;
+	}
+}
+
+.icon-round-sm {
+	@include square(2.5rem, 50%);
+	border: 1px #dddcdc solid;
+	font-size: 1.2rem;
+
+	&:hover {
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+	}
+}
+
+input {
+	border: none;
+	outline: none !important;
+	background-color: transparent;
+	font-family: 'Poppins', sans-serif;
+}
+.text-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.text-clamp--1 {
+	-webkit-line-clamp: 1;
+}
+.text-clamp--2 {
+	-webkit-line-clamp: 2;
+}
+.text-clamp--3 {
+	-webkit-line-clamp: 3;
+}
+.text-clamp--4 {
+	-webkit-line-clamp: 4;
+}
+.text-clamp--5 {
+	-webkit-line-clamp: 5;
+}
