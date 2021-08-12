@@ -3,10 +3,32 @@
 .admin-sidebar {
 	padding: 1.8rem 1.8rem 0;
 	text-align: center;
-	height: 100vh;
 
 	&__link {
 		font-size: 1.5rem;
 		color: $text-color;
 	}
+}
+.header {
+	font-size: 1.6rem;
+	@include flex-box(center, space-between);
+	&__icon {
+		color: $text-white;
+		cursor: pointer;
+	}
+	&__avatar {
+		@include flex-box(center, center);
+		&-name {
+			color: $text-white;
+			margin-left: 1.5rem !important;
+			cursor: pointer;
+		}
+	}
+}
+.logo {
+	height: 5rem;
+	background: url(../../assets/images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
 }

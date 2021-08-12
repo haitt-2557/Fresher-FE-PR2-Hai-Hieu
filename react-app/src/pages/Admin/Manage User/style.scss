@@ -1,0 +1,7 @@
+/** @format */
+@import '../../../assets/scss/index.scss';
+.ant-btn.delete-btn {
+	background-color: transparent;
+	color: $light-red;
+	border-color: $light-red;
+}

@@ -1,0 +1,23 @@
+/** @format */
+
+@import '../../../assets/scss/index.scss';
+
+.product-admin {
+	@include flex-box(center, flex-start);
+	margin-bottom: 0.5rem;
+	&__image {
+		@include box(5rem);
+	}
+
+	&__info {
+		margin: 0 1rem;
+		width: 10rem;
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}

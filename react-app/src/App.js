@@ -5,8 +5,11 @@ import { Spin } from 'antd';
 import PaymentLayout from './layouts/PaymentLayout';
 import PrivateLayout from './layouts/PrivateLayouts';
 import PublicLayout from './layouts/PublicLayout';
-import ManageProduct from './pages/Admin/Manage Product/index';
-import ManageCategory from './pages/Admin/Manage Category/index';
+import ManageProduct from './pages/Admin/ManageProduct/index';
+import ManageOrder from './pages/Admin/Manage Order/index';
+import ManageUser from './pages/Admin/Manage User/index';
+import AddProduct from './pages/Admin/ManageProduct/AddProduct/index';
+import DetailProductAdmin from './pages/Admin/ManageProduct/productDetailsAdmin';
 function App() {
 	return (
 		<Suspense
@@ -32,6 +35,14 @@ function App() {
 					<PublicLayout exact path='/product/:id' component={React.lazy(() => import('./pages/User/ProductDetails'))} />
 					<PublicLayout exact path='/shop' component={React.lazy(() => import('./pages/User/Products'))} />
 					<PublicLayout exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></PublicLayout>
+					<PaymentLayout exact path='/payment' component={React.lazy(() => import('./pages/User/Payment/component/payment'))} />
+					<PaymentLayout exact path='/shipping' component={React.lazy(() => import('./pages/User/Payment/component/paymentShipping'))} />
+					<PaymentLayout
+						exact
+						path='/paymentConfirm'
+						component={React.lazy(() => import('./pages/User/Payment/component/paymentConfirm'))}
+					/>
+					<PaymentLayout exact path='/success/:id' component={React.lazy(() => import('./pages/User/Success'))} />
 					<PaymentLayout exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles/profile'))} />
 					<PaymentLayout exact path='/profile/password' component={React.lazy(() => import('./pages/User/Profiles/changepass'))} />
 					<PaymentLayout exact path='/profile/purchases' component={React.lazy(() => import('./pages/User/Profiles/purchase'))} />
@@ -46,15 +57,41 @@ function App() {
 						)}></Route>
 					<Route
 						exact
-						path='/admin/manage-category'
+						path='/admin/manage-order'
 						render={() => (
 							<PrivateLayout>
-								<ManageCategory />
+								<ManageOrder />
+							</PrivateLayout>
+						)}></Route>
+					<Route
+						exact
+						path='/admin/manage-user'
+						render={() => (
+							<PrivateLayout>
+								<ManageUser />
+							</PrivateLayout>
+						)}></Route>
+
+					<Route
+						exact
+						path='/admin/productDetailsAdmin/:id'
+						render={() => (
+							<PrivateLayout>
+								<DetailProductAdmin />
+							</PrivateLayout>
+						)}></Route>
+
+					<Route
+						exact
+						path='/admin/productCreateAdmin'
+						render={() => (
+							<PrivateLayout>
+								<AddProduct />
 							</PrivateLayout>
 						)}></Route>
 				</Switch>
-			</Router>
-		</Suspense>
+			</Router >
+		</Suspense >
 	);
 }
 

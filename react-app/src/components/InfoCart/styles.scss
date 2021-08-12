@@ -1,0 +1,107 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/mixin";
+
+.infoCart {
+    background-color: $border-color;
+    padding: 3rem;
+    border-left: 1px solid $border-color;
+    @include large {
+        border: none;
+        padding: 2rem 3rem;
+    }
+    &__cart {
+        margin-bottom: 2rem;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 1em;
+        border-bottom: 1px solid $gray-1;
+        &--item {
+            td {
+                vertical-align: middle;
+                &:nth-child(2) {
+                    text-align: left;
+                    padding-left: 1.5rem;
+                }
+                &:nth-child(3) {
+                    text-align: right;
+                }
+              
+            }
+           
+        }
+
+        &--name-price{
+            @include flex-box(center, space-between);
+        }
+        &--img {
+            position: relative;
+            padding: 0 1rem;
+            @include bgc-image(2%);
+            width: 16%;
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            background-color: $white;
+
+            img {
+                @include absolute(0, "", "", 50%);
+                @include transform-translate(x, -50%);
+                width: 80%;
+                height: 100%;
+            }
+        }
+        &--amount {
+            display: block;
+            // @include absolute(0, 0, "", "");
+            // @include centerWidthHeight(2rem);
+            // @include transform-translate(xy, 50%, -50%);
+            border-radius: 50%;
+            font-size: 1.3rem;
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+    &__discount {
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 3rem 0;
+        form {
+            @include flex-box(center, center);
+            gap: 1rem;
+            input {
+                flex: 1;
+                padding: 1rem;
+                border-radius: 4px;
+            }
+            button {
+                padding: 1.2rem 2rem;
+                background-color: $gray-2;
+                border-radius: 4px;
+                font-weight: 500;
+                @include desktop {
+                    padding: 1.2rem 3rem;
+                }
+            }
+        }
+    }
+    &__price {
+        padding: 3rem 0;
+
+        &--item {
+            @include flex-box(center, space-between);
+            padding-bottom: 1rem;
+            p {
+                font-weight: 500;
+            }
+        }
+        &--total {
+            @include flex-box(center, space-between);
+            border-top: 1px solid $border-color;
+            padding: 3rem 0;
+            span {
+                font-size: 2.6rem;
+                color:$red;
+                opacity: 0.8;
+            }
+        }
+    }
+}

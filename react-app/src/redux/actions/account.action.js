@@ -1,6 +1,6 @@
 /** @format */
 
-import { GET_USER_ACCOUNT, GET_INFO, EDIT_PROFILE } from '../constants';
+import { GET_USER_ACCOUNT, GET_INFO, EDIT_PROFILE, DELETE_USER, CHANGE_ROLE } from '../constants';
 
 export function getUser(params) {
 	return {
@@ -21,3 +21,15 @@ export function editProfile(params) {
 		payload: params,
 	};
 }
+export const deleteUser = (params) => {
+	return {
+		type: DELETE_USER,
+		payload: params,
+	};
+};
+export const changeRole = (params) => {
+	return {
+		type: CHANGE_ROLE,
+		payload: params,
+	};
+};
