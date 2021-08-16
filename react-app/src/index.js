@@ -9,12 +9,10 @@ import i18n from './i18n';
 import store from './redux/store';
 import 'antd/dist/antd.css';
 ReactDOM.render(
-	<React.StrictMode>
-		<Provider store={store}>
-			<I18nextProvider i18n={i18n}>
-				<App />
-			</I18nextProvider>
-		</Provider>
-	</React.StrictMode>,
+	<Provider store={store}>
+		<I18nextProvider i18n={i18n}>
+			<App />
+		</I18nextProvider>
+	</Provider>,
 	document.getElementById('root'),
 );

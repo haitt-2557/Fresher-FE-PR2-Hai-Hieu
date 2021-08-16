@@ -1,0 +1,42 @@
+/** @format */
+@import '../../assets/scss/index.scss';
+
+.footer {
+	min-height: 26rem;
+	background-color: $footer;
+	padding-top: 6rem;
+
+	&__item {
+		&-head {
+			font-weight: 800;
+		}
+		&-text {
+			color: $text-color;
+		}
+	}
+	&__subcribe {
+		&-head {
+			font-weight: 800;
+		}
+		&-icon {
+			@include flex-box(center, flex-start);
+			margin-top: 3rem;
+
+			.icon__custom {
+				margin-right: 3rem;
+				font-size: 2rem;
+				background-color: $text-white;
+				color: $text-color;
+				@include box(4.1rem);
+				border-radius: 50%;
+				@include flex-box(center, center);
+				transition: all 0.1s linear;
+
+				&:hover {
+					background-color: $primary-color;
+					color: $text-white;
+				}
+			}
+		}
+	}
+}
