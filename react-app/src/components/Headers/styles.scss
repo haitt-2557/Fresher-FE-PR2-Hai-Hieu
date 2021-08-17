@@ -4,7 +4,7 @@ $header-border: #ccc;
 @import '../../assets/scss/index.scss';
 
 .header {
-	height: 50px;
+	height: 60px;
 	background-color: $header-color;
 	@include tablet {
 		display: none;
@@ -72,6 +72,15 @@ $header-border: #ccc;
 					.user__loginBtn {
 						text-transform: capitalize;
 						font-size: 1.7rem;
+					}
+					.user__infor {
+						@include flex-box(center, space-between);
+
+						&-name {
+							display: block;
+							margin: 0 1.5rem !important;
+							cursor: pointer;
+						}
 					}
 				}
 			}

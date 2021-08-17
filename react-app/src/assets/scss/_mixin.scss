@@ -17,9 +17,106 @@
 	-moz-transition: all 0.35s ease;
 	-o-transition: all 0.35s ease;
 }
+
+@mixin square($width, $border-radius: 0) {
+	width: $width;
+	height: $width;
+	@if border-radius != 0 {
+		border-radius: $border-radius;
+		-webkit-border-radius: $border-radius;
+		-moz-border-radius: $border-radius;
+		-ms-border-radius: $border-radius;
+		-o-border-radius: $border-radius;
+	}
+}
+
+@mixin transition($property, $time, $type: linear, $delay: 0) {
+	transition: $property $time $type;
+	-webkit-transition: $property $time $type;
+	-o-transition: $property $time $type;
+	-moz-transition: $property $time $type;
+	-ms-transition: $property $time $type;
+	@if $delay != 0 {
+		transition-delay: $delay;
+	}
+}
+
+@mixin transform-translate($type, $x, $y: $x) {
+	@if $type == 'xy' {
+		transform: translate($x, $y);
+		-webkit-transform: translate($x, $y);
+		-ms-transform: translate($x, $y);
+		-moz-transform: translate($x, $y);
+		-o-transform: translate($x, $y);
+	}
+	@if $type == 'x' {
+		transform: translateX($x);
+		-webkit-transform: translateX($x);
+		-ms-transform: translateX($x);
+		-moz-transform: translateX($x);
+		-o-transform: translateX($x);
+	}
+	@if $type == 'y' {
+		transform: translateY($y);
+		-webkit-transform: translateY($y);
+		-ms-transform: translateY($y);
+		-moz-transform: translateY($y);
+		-o-transform: translateY($y);
+	}
+}
+
+@mixin absolute($top, $right, $bottom, $left) {
+	position: absolute;
+	@if $top != '' {
+		top: $top;
+	}
+	@if $bottom != '' {
+		bottom: $bottom;
+	}
+	@if $left != '' {
+		left: $left;
+	}
+	@if $right != '' {
+		right: $right;
+	}
+}
+
+@mixin image($padding-top, $height: 0) {
+	width: 100%;
+	height: 0;
+	padding-top: $padding-top;
+}
+
+@mixin bgc-image($paddingTop: 0, $border: 0) {
+	width: 100%;
+	height: 0;
+	padding-top: $paddingTop;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	@if $border != 0 {
+		border-radius: $border;
+		-webkit-border-radius: $border;
+		-moz-border-radius: $border;
+		-ms-border-radius: $border;
+		-o-border-radius: $border;
+	}
+}
+
+@mixin width-height($width, $height: $width) {
+	@if $width == 'fit-content' {
+		width: -moz-fit-content;
+	}
+	width: $width;
+	@if $height != '' {
+		height: $height;
+	}
+}
+
 $mobile-width: 480px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
+$large-width: 1200px;
 
 @mixin mobile {
 	@media (max-width: #{$mobile-width - 1px}) {
@@ -35,6 +132,12 @@ $desktop-width: 1024px;
 
 @mixin desktop {
 	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: #{$large-width}) {
 		@content;
 	}
 }

@@ -6,9 +6,6 @@
 	},
 	"Home": "Home",
 	"Shop": "Shop",
-	"Collection": "Collection",
-	"Pages": "Pages",
-	"About Us": "About Us",
 	"Faq's": "Faq's",
 	"Blog": "Blog",
 	"Account": "Account",
@@ -72,7 +69,9 @@
 		"button register": "SIGN IN",
 		"already": "Don't have account ?",
 		"button login": "Create account",
-		"forgot": "Forgot your password"
+		"forgot": "Forgot your password ?",
+		"or": "Or sign in with",
+		"google": "Sign in with Google"
 	},
 	"Terms & Conditions": {
 		"title": "Terms & Conditions",
@@ -138,6 +137,10 @@
 		}
 	},
 	"home": {
+		"SearchText": "Search",
+		"SupportText": "Support 24/7",
+		"SearchInput": "What do you need?",
+		"AllCategories": "All Categories",
 		"banner": {
 			"shop now": "shop now",
 			"fresh fruit vegetable": "Fresh fruit,vegetable ",
