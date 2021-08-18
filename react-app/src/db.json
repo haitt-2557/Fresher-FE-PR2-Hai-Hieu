@@ -6,78 +6,79 @@
 			"firstname": "Lưu",
 			"lastname": "Hiếu",
 			"role": "user",
-			"id": 1
+			"id": 1,
+			"description": ""
 		}
 	],
 	"Category": [
 		{
 			"id": 1,
-			"name": "Baker's Rack ",
+			"name": "Baker's Rack",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat10.jpg?v=1595858914 "
 		},
 		{
 			"id": 2,
-			"name": " Breakfast",
+			"name": "Breakfast",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/banner27.jpg?v=1610199416 "
 		},
 		{
 			"id": 3,
-			"name": "Dairy & Chesse ",
+			"name": "Dairy & Chesse",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat6.jpg?v=1592896212 "
 		},
 		{
 			"id": 4,
-			"name": " Dinner",
+			"name": "Dinner",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/banner29.jpg?v=1610200554 "
 		},
 		{
 			"id": 5,
-			"name": "Dairy & Chesse ",
+			"name": "Dairy & Chesse",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat11.jpg?v=1595858994 "
 		},
 		{
 			"id": 6,
-			"name": " Featured Product",
+			"name": "Featured Product",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/banner5_19e6fd2c-70b2-459d-b4d5-d7680262856a.jpg?v=1595936691 "
 		},
 		{
 			"id": 7,
-			"name": "Fresh Fruits ",
+			"name": "Fresh Fruits",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat4.jpg?v=1592896212 "
 		},
 		{
 			"id": 8,
-			"name": "Fresh Meat ",
+			"name": "Fresh Meat",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat5.jpg?v=1592896207 "
 		},
 		{
 			"id": 9,
-			"name": "Fresh Vegetable ",
+			"name": "Fresh Vegetable",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat8.jpg?v=1592896145 "
 		},
 		{
 			"id": 10,
-			"name": "Green Seafood ",
+			"name": "Green Seafood",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat9.jpg?v=1592896206 "
 		},
 		{
 			"id": 11,
-			"name": "New Product ",
+			"name": "New Product",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat2_d3ac7e6d-390d-4ddd-b12a-73f7313576b4.jpg?v=1595936679 "
 		},
 		{
 			"id": 12,
-			"name": "Sea & Fish ",
+			"name": "Sea & Fish",
 			"img": "https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat1.jpg?v=1592897066 "
 		},
 		{
 			"id": 13,
-			"name": "Organic Juice ",
+			"name": "Organic Juice",
 			"img": " https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat7.jpg?v=1592896147"
 		},
 		{
 			"id": 14,
-			"name": " Organic Dryfruit",
+			"name": "Organic Dryfruit",
 			"img": " https://cdn.shopify.com/s/files/1/0412/8151/9765/collections/cat3.jpg?v=1592896213"
 		}
 	],
@@ -100,7 +101,7 @@
 		},
 		{
 			"id": 5,
-			"name": " chikoo"
+			"name": "chikoo"
 		},
 		{
 			"id": 6,
@@ -139,7 +140,8 @@
 			"rate": 4,
 			"newPrice": 60000,
 			"news": true,
-			"tagId": 1
+			"tagId": 1,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 2,
@@ -152,7 +154,8 @@
 			"rate": 5,
 			"newPrice": 23000,
 			"news": true,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 3,
@@ -165,7 +168,8 @@
 			"rate": 5,
 			"newPrice": 35000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 4,
@@ -178,7 +182,8 @@
 			"rate": 1,
 			"newPrice": 20000,
 			"news": true,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 5,
@@ -192,7 +197,8 @@
 			"newPrice": 23000,
 			"oldPrice": 30000,
 			"news": true,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 6,
@@ -206,7 +212,8 @@
 			"newPrice": 34000,
 			"oldPrice": 38000,
 			"news": true,
-			"tagId": 1
+			"tagId": 1,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 7,
@@ -220,7 +227,8 @@
 			"newPrice": 70000,
 			"oldPrice": 72000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 8,
@@ -233,7 +241,8 @@
 			"rate": 1,
 			"newPrice": 90000,
 			"news": true,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 9,
@@ -246,7 +255,8 @@
 			"rate": 3,
 			"newPrice": 12000,
 			"news": false,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 10,
@@ -259,7 +269,8 @@
 			"rate": 3,
 			"newPrice": 34000,
 			"news": false,
-			"tagId": 5
+			"tagId": 5,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 11,
@@ -272,7 +283,8 @@
 			"rate": 2,
 			"newPrice": 44000,
 			"news": true,
-			"tagId": 1
+			"tagId": 1,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 12,
@@ -287,7 +299,8 @@
 			"oldPrice": 29000,
 			"news": true,
 			"tagId": 1,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 13,
@@ -302,7 +315,8 @@
 			"oldPrice": 29000,
 			"news": false,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 14,
@@ -317,7 +331,8 @@
 			"oldPrice": 29000,
 			"news": true,
 			"tagId": 6,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 15,
@@ -332,7 +347,8 @@
 			"oldPrice": 29000,
 			"news": true,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 16,
@@ -347,7 +363,8 @@
 			"oldPrice": 29000,
 			"news": true,
 			"tagId": 7,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 17,
@@ -362,7 +379,8 @@
 			"oldPrice": 29000,
 			"news": false,
 			"tagId": 8,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 18,
@@ -376,7 +394,8 @@
 			"newPrice": 23000,
 			"oldPrice": 29000,
 			"news": true,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 19,
@@ -389,7 +408,8 @@
 			"rate": 5,
 			"newPrice": 12000,
 			"news": true,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 20,
@@ -402,7 +422,8 @@
 			"rate": 5,
 			"newPrice": 122000,
 			"news": false,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 21,
@@ -415,7 +436,8 @@
 			"rate": 5,
 			"newPrice": 122000,
 			"news": true,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 22,
@@ -428,7 +450,8 @@
 			"rate": 5,
 			"newPrice": 122000,
 			"news": false,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 23,
@@ -441,7 +464,8 @@
 			"rate": 2,
 			"newPrice": 122000,
 			"news": false,
-			"tagId": 5
+			"tagId": 5,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 24,
@@ -454,7 +478,8 @@
 			"rate": 2,
 			"newPrice": 99000,
 			"news": false,
-			"tagId": 5
+			"tagId": 5,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 25,
@@ -468,7 +493,8 @@
 			"newPrice": 99000,
 			"news": false,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 26,
@@ -482,7 +508,8 @@
 			"newPrice": 99000,
 			"news": false,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 27,
@@ -496,7 +523,8 @@
 			"newPrice": 99000,
 			"news": false,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 28,
@@ -510,7 +538,8 @@
 			"newPrice": 99000,
 			"news": false,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 29,
@@ -524,7 +553,8 @@
 			"newPrice": 99000,
 			"news": false,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 30,
@@ -539,7 +569,8 @@
 			"oldPrice": 149000,
 			"news": true,
 			"tagId": 4,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 31,
@@ -553,7 +584,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 32,
@@ -567,7 +599,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": true,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 33,
@@ -581,7 +614,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 34,
@@ -595,7 +629,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": true,
-			"tagId": 4
+			"tagId": 4,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 35,
@@ -609,7 +644,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 36,
@@ -623,7 +659,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 37,
@@ -637,7 +674,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 38,
@@ -651,7 +689,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": false,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 39,
@@ -665,7 +704,8 @@
 			"newPrice": 139000,
 			"oldPrice": 149000,
 			"news": true,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 40,
@@ -678,7 +718,8 @@
 			"rate": 2,
 			"newPrice": 78000,
 			"news": true,
-			"tagId": 2
+			"tagId": 2,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 41,
@@ -692,7 +733,8 @@
 			"newPrice": 78000,
 			"news": false,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 42,
@@ -706,7 +748,8 @@
 			"newPrice": 78000,
 			"news": true,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 43,
@@ -720,7 +763,8 @@
 			"newPrice": 78000,
 			"news": true,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 44,
@@ -734,7 +778,8 @@
 			"newPrice": 78000,
 			"news": true,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 45,
@@ -748,7 +793,8 @@
 			"newPrice": 390000,
 			"news": false,
 			"tagId": 5,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 46,
@@ -762,7 +808,8 @@
 			"newPrice": 390000,
 			"news": true,
 			"tagId": 3,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 47,
@@ -776,7 +823,8 @@
 			"newPrice": 390000,
 			"news": false,
 			"tagId": 3,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 48,
@@ -790,7 +838,8 @@
 			"newPrice": 390000,
 			"news": true,
 			"tagId": 3,
-			"hot": true
+			"hot": true,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 49,
@@ -802,9 +851,10 @@
 			],
 			"rate": 3,
 			"newPrice": 390000,
-			"oldPrice": 40000,
+			"oldPrice": 400000,
 			"news": false,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		},
 		{
 			"id": 50,
@@ -817,7 +867,8 @@
 			"rate": 5,
 			"newPrice": 390000,
 			"news": true,
-			"tagId": 3
+			"tagId": 3,
+			"description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response."
 		}
 	]
 }

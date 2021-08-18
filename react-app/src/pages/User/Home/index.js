@@ -1,62 +1,28 @@
 /** @format */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Row, Tabs, Collapse } from 'antd';
-import { PhoneOutlined, CalendarOutlined, CommentOutlined } from '@ant-design/icons';
+import { CalendarOutlined, CommentOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import Slide from './Slide';
 import { getProductHome, getCategory } from '../../../redux/actions/index';
 import { FaTruck, FaRupeeSign } from 'react-icons/fa';
 import { FiRefreshCw, FiHeadphones } from 'react-icons/fi';
-
 import './style.scss';
 
 const { TabPane } = Tabs;
 function Home({ getProductHome, productHome, getCategory, categoryData }) {
 	const { t } = useTranslation();
-
 	useEffect(() => {
 		document.title = 'Oganic | Trang Chủ';
-
 		getProductHome();
 		getCategory();
 	}, [getCategory, getProductHome]);
+
 	return (
 		<div className='home'>
 			<div className='container'>
-				<section className='home__cate-banner'>
-					<Row gutter={[16, 16]}>
-						<Col lg={24} md={24} xs={24}>
-							<div className='home__search'>
-								<div className='home__search__form'>
-									<form action='#'>
-										<div className='home__search__categories'>
-											{t('home.AllCategories')}
-											<span className='arrow_carrot-down'></span>
-										</div>
-										<input type='text' placeholder={t('home.SearchInput')} />
-										<button
-											type='submit'
-											className='site-btn button-primary button'>
-											{t('home.SearchText')}
-										</button>
-									</form>
-								</div>
-								<div className='home__search__phone'>
-									<div className='home__search__phone__icon'>
-										<PhoneOutlined />
-									</div>
-									<div className='home__search__phone__text'>
-										<h5>+65 11.188.888</h5>
-										<span>{t('home.SupportText')}</span>
-									</div>
-								</div>
-							</div>
-						</Col>
-					</Row>
-				</section>
-
 				<section className='home__slide'>
 					<Row>
 						<Col md={24} sm={24}>
@@ -69,7 +35,7 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 					<Row gutter={24}>
 						<Col md={12} sm={24}>
 							<div className='banner__item'>
-								<a href='#' className='banner__img'>
+								<a href='/' className='banner__img'>
 									<img
 										src='https://cdn.shopify.com/s/files/1/0412/8151/9765/files/banner1.jpg?v=1593258151'
 										alt='banner'></img>
@@ -87,7 +53,7 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 						</Col>
 						<Col md={12} sm={24}>
 							<div className='banner__item'>
-								<a href='#' className='banner__img'>
+								<a href='/' className='banner__img'>
 									<img
 										src='https://cdn.shopify.com/s/files/1/0412/8151/9765/files/banner2-min.jpg?v=1593256886'
 										alt='banner'></img>
