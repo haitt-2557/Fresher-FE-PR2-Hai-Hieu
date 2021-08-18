@@ -6,9 +6,6 @@
 	},
 	"Home": "Home",
 	"Shop": "Shop",
-	"Collection": "Collection",
-	"Pages": "Pages",
-	"About Us": "About Us",
 	"Faq's": "Faq's",
 	"Blog": "Blog",
 	"Account": "Account",
@@ -22,10 +19,16 @@
 	"Address": "Address",
 	"Contact": "Contact",
 	"Cart": "My Cart",
-	"Add cart success": "Add cart success",
+	"Add cart success": "Successfully added to cart",
 	"Checkout": "Checkout",
 	"Shoping Cart": "Shoping Cart",
+	"All Product": "All Product",
+	"Rating": "Rating",
+	"price": "Price",
+	"sale": "Sale Off",
+	"empty-cart": "Your's cart is currently empty!",
 	"Categories": {
+		"Title": "Category",
 		"Top_Categories": {
 			"name": "Top Categories",
 			"Fruits": "Fruits",
@@ -144,12 +147,21 @@
 		"SupportText": "Support 24/7",
 		"SearchInput": "What do you need?",
 		"AllCategories": "All Categories",
+		"blog": {
+			"FromTheBlog": "From The Blog",
+			"BlogDateTime": "Aug ,2021",
+			"Title": "6 ways to prepare breakfast",
+			"Content": "After a good night's sleep, the body wakes up with an empty stomach because it has used up all the energy it took in from last night's dinner. Therefore, breakfast is an extremely important meal to provide the body with the necessary energy to start a new day."
+		},
+
 		"banner": {
 			"shop now": "shop now",
 			"fresh fruit vegetable": "Fresh fruit,vegetable ",
 			"on our product": "On our product",
 			"Vegetable Eggplant": "Vegetable Eggplant ",
-			"100% Fresh food": "100% Fresh food"
+			"100% Fresh food": "100% Fresh food",
+			"Banner": "Organi Shop",
+			"Banner-bread": "Home - Shop"
 		},
 
 		"countdown": {
@@ -176,23 +188,9 @@
 			"title": "Shop By Category"
 		}
 	},
-	"category": {
-		"Baker's Rack": "Baker's Rack",
-		"Breakfast": "Breakfast",
-		"Dairy & Chesse": "Dairy & Chesse",
-		"Dinner": "Dinner",
-		"Featured Product": "Featured Product",
-		"Fresh Fruits": "Fresh Fruits ",
-		"Fresh Meat": "Fresh Meat ",
-		"Fresh Vegetable": "Fresh Vegetable",
-		"Green Seafood": "Green Seafood",
-		"New Product": "New Product",
-		"Sea & Fish": "Sea & Fish",
-		"Organic Juice": "Organic Juice ",
-		"Organic Dryfruit": "Organic Dryfruit"
-	},
 
 	"tags": {
+		"Tag": "Tags",
 		"Almond": "Almond",
 		"banana": "banana",
 		"bitrrot": "bitrrot",
@@ -221,7 +219,8 @@
 		"placeholder": "Select a type",
 		"Anything...": "Anything...",
 		"Organic Juice ": "Organic Juice ",
-		"Organic Dryfruit": "Organic Dryfruit"
+		"Organic Dryfruit": "Organic Dryfruit",
+		"found": "Products found"
 	},
 
 	"productDetail": {
@@ -243,7 +242,13 @@
 		"Material": "Material",
 		"Quantity": "Quantity",
 		"Share": "Share",
-		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+		"addToCart": "ADD TO CART",
+		"FreePickup": "Free pickup today",
+		"ExpressShipping": "Shipping express",
+		"Weight": "Weight",
+		"RecentProduct": "Recently Product",
+		"review": "reviews"
 	},
 	"cart": {
 		"Yes": "Yes",
@@ -424,5 +429,20 @@
 		"Text": "Get E-mail updates about our latest shop and special offers.",
 		"Placeholder": "Enter your email",
 		"Subcribe_btn": "Subscribe"
+	},
+	"Product_Category": {
+		"Baker's Rack": "Baker's Rack",
+		"Breakfast": "Breakfast",
+		"Dairy & Chesse": "Dairy & Chesse",
+		"Dinner": "Dinner",
+		"Featured Product": "Featured Product",
+		"Fresh Fruits": "Fresh Fruits ",
+		"Fresh Meat": "Fresh Meat ",
+		"Fresh Vegetable": "Fresh Vegetable",
+		"Green Seafood": "Green Seafood",
+		"New Product": "New Product",
+		"Sea & Fish": "Sea & Fish",
+		"Organic Juice": "Organic Juice ",
+		"Organic Dryfruit": "Organic Dryfruit"
 	}
 }

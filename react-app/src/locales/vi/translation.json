@@ -23,10 +23,16 @@
 	"Address": "Địa chỉ",
 	"Contact": "Liên hệ",
 	"Cart": "Giỏ hàng của tôi",
-	"Add card success": "Thêm vào giỏ hàng thành công",
+	"Add cart success": "Thêm hàng vào giỏ thành công",
 	"Checkout": "Thanh toán",
 	"Shoping Cart": "Giỏ hàng",
+	"All Product": "Tất cả sản phẩm",
+	"Rating": "Xếp hạng",
+	"price": "Giá tiền",
+	"sale": "giảm giá",
+	"empty-cart": "Giỏ hàng của bạn hiện đang trống!",
 	"Categories": {
+		"Title": "Danh mục sản phẩm",
 		"Top_Categories": {
 			"name": "Danh mục hàng đầu",
 			"Fruits": "Trái cây",
@@ -146,12 +152,21 @@
 		"SupportText": "Hỗ trợ 24/7",
 		"SearchInput": "Bạn muốn tìm gì?",
 		"AllCategories": "Danh mục sản phẩm",
+		"FromTheBlog": "Bài viết",
+		"blog": {
+			"FromTheBlog": "Bài viết",
+			"BlogDateTime": "Tháng 8, 2021",
+			"Title": "6 cách chuẩn bị bữa sáng",
+			"Content": "Sau một đêm ngủ ngon giấc, cơ thể thức dậy với cái dạ dày trống rỗng vì đã tiêu ngốn hết năng lượng nạp vào từ bữa tối hôm qua. Vì lẽ đó mà bữa ăn sáng là bữa ăn vô cùng quan trọng cung cấp năng lượng cần thiết cho cơ thể để khởi đầu một ngày mới"
+		},
 		"banner": {
 			"shop now": "mua sắm ngay",
 			"fresh fruit vegetable": "Trái cây tươi, rau ",
 			"on our product": "Trên sản phẩm của chúng tôi",
 			"Vegetable Eggplant": "Rau cà tím ",
-			"100% Fresh food": "100% thực phẩm tươi"
+			"100% Fresh food": "100% thực phẩm tươi",
+			"Banner": "Cửa hàng Organi",
+			"Banner-bread": "Trang chủ - Của hàng"
 		},
 
 		"countdown": {
@@ -178,22 +193,9 @@
 			"title": "Cửa hàng theo thể loại"
 		}
 	},
-	"category": {
-		"Baker's Rack": "Baker's Rack",
-		"Breakfast": "Bữa ăn sáng",
-		"Dairy & Chesse": "Sữa & Phô mai",
-		"Dinner": "Bữa tối",
-		"Featured Product": "Sản phẩm nổi bật",
-		"Fresh Fruits": "Trái cây tươi ",
-		"Fresh Meat": "Thịt tươi sống ",
-		"Fresh Vegetable": "Rau quả tươi",
-		"Green Seafood": "Hải sản xanh",
-		"New Product": "Sản phẩm mới",
-		"Sea & Fish": "Cá biển",
-		"Organic Juice ": "Nước trái cây ",
-		"Organic Dryfruit": "Quả khô hữu cơ"
-	},
+
 	"tags": {
+		"Tag": "Tags",
 		"Almond": "Hạnh nhân",
 		"banana": "chuối",
 		"bitrrot": "cà rốt",
@@ -220,7 +222,8 @@
 		"of": "trên",
 		"result": "kết quả",
 		"placeholder": "Chọn một loại",
-		"Anything...": "Bất cứ thứ gì..."
+		"Anything...": "Bất cứ thứ gì...",
+		"found": "Sản phẩm tìm thấy"
 	},
 	"productDetail": {
 		"Review": "Viết đánh giá",
@@ -241,7 +244,13 @@
 		"Material": "Xuất xứ",
 		"Quantity": "Số lượng",
 		"Share": "Chia sẻ",
-		"description": "Nó có quả nhỏ hơn quả bưởi, vỏ mỏng, khi chín thường có màu da cam, có vị ngọt hoặc hơi chua. Loài cam là một cây lai được trồng từ xưa, có thể lai giống giữa loài bưởi (Citrus maxima) và quýt (Citrus reticulata)."
+		"description": "Nó có quả nhỏ hơn quả bưởi, vỏ mỏng, khi chín thường có màu da cam, có vị ngọt hoặc hơi chua. Loài cam là một cây lai được trồng từ xưa, có thể lai giống giữa loài bưởi (Citrus maxima) và quýt (Citrus reticulata).",
+		"addToCart": "THÊM VÀO GIỎ HÀNG",
+		"FreePickup": "Miễn phí vận chuyển trong hôm nay",
+		"ExpressShipping": "Giao hàng nhanh chóng",
+		"Weight": "Trọng lượng",
+		"RecentProduct": "Sản phẩm gần đây",
+		"review": "đánh giá"
 	},
 	"cart": {
 		"Yes": "Đồng ý",
@@ -413,5 +422,20 @@
 		"Subcribe": "Tham gia để nhận thông tin ngây bây giờ",
 		"Subcribe_btn": "Đăng ký",
 		"Text": "Nhận thông tin cập nhật qua Email những thông mới nhất về cửa hàng của chúng tôi và các ưu đãi đặc biệt."
+	},
+	"Product_Category": {
+		"Baker's Rack": "Baker's Rack",
+		"Breakfast": "Bữa ăn sáng",
+		"Dairy & Chesse": "Sữa & Phô mai",
+		"Dinner": "Bữa tối",
+		"Featured Product": "Sản phẩm nổi bật",
+		"Fresh Fruits": "Trái cây tươi ",
+		"Fresh Meat": "Thịt tươi sống ",
+		"Fresh Vegetable": "Rau quả tươi",
+		"Green Seafood": "Hải sản xanh",
+		"New Product": "Sản phẩm mới",
+		"Sea & Fish": "Cá biển",
+		"Organic Juice": "Nước trái cây",
+		"Organic Dryfruit": "Quả khô hữu cơ"
 	}
 }

@@ -6,7 +6,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import React, { useEffect } from 'react';
 import { Avatar, Button, Typography } from '@material-ui/core';
-import { Select, Menu, Dropdown } from 'antd';
+import { Select, Menu, Dropdown, Row, Col, Collapse } from 'antd';
 import Vietnam from '../../assets/images/vi.svg';
 import English from '../../assets/images/en.svg';
 import { useTranslation } from 'react-i18next';
@@ -19,6 +19,7 @@ import './styles.scss';
 import { useState } from 'react';
 import Navbar from './Navbar';
 import { useDispatch } from 'react-redux';
+import { PhoneOutlined } from '@ant-design/icons';
 const { Option } = Select;
 
 export default function Header() {
@@ -27,20 +28,6 @@ export default function Header() {
 	const location = useLocation();
 	const [users, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
 
-	useEffect(() => {
-		if (location.pathname === '/' && users) {
-			const name = users?.user?.firstname + ' ' + users?.user?.lastname;
-			if (!users.user?.name) {
-				toast.success(`Welcome ${name}`, {
-					position: toast.POSITION.TOP_RIGHT,
-				});
-			} else {
-				toast.success(`Welcome ${users.user.name}`, {
-					position: toast.POSITION.TOP_RIGHT,
-				});
-			}
-		}
-	}, [users, location.pathname]);
 	const { t, i18n } = useTranslation();
 	const changeLanguage = (lang) => {
 		i18n.changeLanguage(lang);
@@ -56,12 +43,12 @@ export default function Header() {
 
 	const userExpand = (
 		<Menu>
-			<Menu.Item>
+			<Menu.Item key={1}>
 				<Link to='/profile'>
 					<Typography variant='h5'>{t('Profile.account.title')}</Typography>
 				</Link>
 			</Menu.Item>
-			<Menu.Item>
+			<Menu.Item key={2}>
 				<Typography onClick={logout} variant='h5'>
 					{t('Logout')}
 				</Typography>
@@ -90,24 +77,13 @@ export default function Header() {
 									<PinterestIcon className='icon' />
 								</div>
 								<div className='infor__option-language'>
-									<Select
-										defaultValue='en'
-										className='language__select'
-										onChange={changeLanguage}>
+									<Select defaultValue='en' className='language__select' onChange={changeLanguage}>
 										<Option value='en'>
-											<img
-												src={English}
-												className='language__select-img'
-												alt='en'
-											/>
+											<img src={English} className='language__select-img' alt='en' />
 											{t('language.english')}
 										</Option>
 										<Option value='vi'>
-											<img
-												src={Vietnam}
-												className='language__select-img'
-												alt='vi'
-											/>
+											<img src={Vietnam} className='language__select-img' alt='vi' />
 											{t('language.vietnam')}
 										</Option>
 									</Select>
@@ -116,10 +92,7 @@ export default function Header() {
 									{!users?.user ? (
 										<>
 											<PersonIcon />
-											<Button
-												component={Link}
-												to='/login'
-												className='user__loginBtn'>
+											<Button component={Link} to='/login' className='user__loginBtn'>
 												{t('Login')}
 											</Button>
 										</>
@@ -128,45 +101,57 @@ export default function Header() {
 											<Avatar
 												className='user__infor-avatar'
 												src={users?.user.imageUrl}
-												alt={
-													users?.user.name
-														? users.user.name
-														: users?.user?.firstname +
-														' ' +
-														users?.user?.lastname
-												}>
+												alt={users?.user.name ? users.user.name : users?.user?.firstname + ' ' + users?.user?.lastname}>
 												{users.user.name
 													? users.user.name.charAt(0)
-													: (
-														users?.user?.firstname +
-														' ' +
-														users?.user?.lastname
-													).charAt(0)}
+													: (users?.user?.firstname + ' ' + users?.user?.lastname).charAt(0)}
 											</Avatar>
-											<Dropdown
-												overlay={userExpand}
-											>
-												<Typography
-													className='user__infor-name'
-													variant='h5'>
-													{users?.user.name
-														? users.user.name
-														: users?.user?.firstname +
-														' ' +
-														users?.user?.lastname}
+											<Dropdown overlay={userExpand}>
+												<Typography className='user__infor-name' variant='h5'>
+													{users?.user.name ? users.user.name : users?.user?.firstname + ' ' + users?.user?.lastname}
 												</Typography>
 											</Dropdown>
 										</div>
-									)}
-								</div>
-							</div>
-						</div>
-					</div>
-				</Container>
-			</header>
+									)
+									}
+								</div >
+							</div >
+						</div >
+					</div >
+				</Container >
+			</header >
 			<Container>
-				<Navbar onChange={changeLanguage} />
-			</Container>
+				<Navbar onChange={changeLanguage} users={users} userExpand={userExpand} />
+				<section className='home__cate-banner'>
+					<Row gutter={[16, 16]}>
+						<Col lg={24} md={24} xs={24}>
+							<div className='home__search'>
+								<div className='home__search__form'>
+									<form action='#'>
+										<div className='home__search__categories'>
+											{t('home.AllCategories')}
+											<span className='arrow_carrot-down'></span>
+										</div>
+										<input type='text' placeholder={t('home.SearchInput')} />
+										<button type='submit' className='site-btn button-primary button'>
+											{t('home.SearchText')}
+										</button>
+									</form>
+								</div >
+								<div className='home__search__phone'>
+									<div className='home__search__phone__icon'>
+										<PhoneOutlined />
+									</div>
+									<div className='home__search__phone__text'>
+										<h5>+65 11.188.888</h5>
+										<span>{t('home.SupportText')}</span>
+									</div>
+								</div>
+							</div >
+						</Col >
+					</Row >
+				</section >
+			</Container >
 			<ToastContainer autoClose='2500' />
 		</>
 	);

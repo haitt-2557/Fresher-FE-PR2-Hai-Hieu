@@ -7,7 +7,21 @@ import Header from './components/Headers';
 import { Spin } from 'antd';
 function App() {
 	return (
-		<Suspense fallback={<Spin style={{ margin: '0 auto' }} />}>
+		<Suspense
+			fallback={
+				<Spin
+					tip='Loading...'
+					size='large'
+					style={{
+						display: 'block',
+						fontSize: '20px',
+						position: 'absolute',
+						top: '50%',
+						left: '50%',
+						transform: 'translate(-50%,-50%)',
+					}}
+				/>
+			}>
 			<Router>
 				<Header />
 				<Container maxWidth='lg'>
@@ -27,11 +41,27 @@ function App() {
 							path='/register'
 							component={React.lazy(() => import('./pages/User/Register'))}
 						/>
-					</Switch>
-				</Container>
+
+						<Route
+							exact
+							path='/product/:id'
+							component={React.lazy(() => import('./pages/User/ProductDetails'))} />
+
+						<Route
+							exact
+							path='/shop'
+							component={React.lazy(() => import('./pages/User/Products'))}
+						/>
+						<Route
+							exact
+							path='/profile'
+							component={React.lazy(() => import('./pages/User/Profiles'))}
+						/>
+					</Switch >
+				</Container >
 				<Footer />
-			</Router>
-		</Suspense>
+			</Router >
+		</Suspense >
 	);
 }
 

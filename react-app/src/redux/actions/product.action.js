@@ -1,4 +1,6 @@
-import { GET_PRODUCT_HOME, GET_PRODUCTS, GET_TOTAL_PRODUCTS } from "../constants";
+/** @format */
+
+import { GET_PRODUCT_HOME, GET_PRODUCTS, GET_TOTAL_PRODUCTS } from '../constants';
 
 export function getProductHome(params) {
     return {
