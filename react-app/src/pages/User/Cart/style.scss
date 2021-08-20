@@ -1,0 +1,124 @@
+/** @format */
+
+@import '../../../assets/scss/index.scss';
+.product-banner {
+	background-image: url('../../../assets/images/breadcrumb.jpg');
+	padding: 2.5rem 0;
+	margin-top: 2rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	color: $text-white;
+	font-size: 2rem;
+
+	&__title {
+		color: $text-white;
+		margin-bottom: 1rem;
+		font-size: 5rem;
+		text-transform: capitalize;
+		font-weight: 800;
+	}
+}
+.cart {
+	padding-top: 3rem;
+	&__table {
+		font-size: 1.6rem;
+		&-header {
+			font-size: 1.8rem;
+		}
+
+		&-item {
+			@include flex-box(center, flex-start);
+			padding: 3rem 0;
+
+			.item__img {
+				width: 10rem;
+				margin-right: 1.5rem;
+			}
+		}
+		&-quantity {
+			@include flex-box(center, flex-start);
+			.quantity__number {
+				display: block;
+				width: 3.5rem;
+				text-align: center;
+			}
+		}
+	}
+}
+.cart-bottom {
+	@include flex-box(center, space-between);
+	padding: 2rem 0;
+	.ant-btn.cart-bottom__continue {
+		text-align: center;
+		border-radius: 3px;
+		padding: 2.2rem;
+		@include flex-box(center, space);
+	}
+	&__total {
+		@include flex-box(center, flex-end);
+		padding-bottom: 3rem;
+		.wrap {
+			flex-basis: 40%;
+			padding: 3rem;
+			background: $border-color;
+		}
+
+		&-header {
+			font-size: 2.5rem;
+			font-weight: 700;
+		}
+		&-price {
+			@include flex-box(center, space-between);
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+
+			.price__sub {
+				font-weight: 700;
+			}
+			.price__total {
+				font-size: 2.2rem;
+				color: $light-red;
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			}
+		}
+
+		.checkout {
+			width: 100%;
+			display: block;
+			margin-top: 2rem;
+		}
+		.ant-btn.checkout-btn {
+			width: 100%;
+			@include flex-box(center, center);
+			padding: 1.8rem;
+			border-radius: 2px;
+		}
+	}
+}
+.need-login {
+	width: 100%;
+	text-align: center;
+	padding: 1rem 0;
+	margin-top: 1rem;
+
+	span {
+		font-size: 1.6rem;
+		margin-right: 1.2rem;
+		color: $light-red;
+	}
+	a {
+		padding: 1rem 1.4rem;
+		font-size: 1.6rem;
+		background: $primary-color;
+		color: $text-white;
+		border: 1px solid $primary-color;
+
+		&:hover {
+			background: $text-white;
+			border: 1px solid $blue;
+			color: $blue;
+		}
+	}
+}

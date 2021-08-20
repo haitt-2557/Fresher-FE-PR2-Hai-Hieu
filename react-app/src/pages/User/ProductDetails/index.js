@@ -129,7 +129,7 @@ const ProductDetails = ({
                                     <h3>{product?.name}</h3>
                                     <div className='product__details__rating'>
                                         <Star rate={product?.rate}></Star>
-                                        <span>( {countComment} {t('productDetail.review')})</span>
+                                        <span>(18 {t('productDetail.review')})</span>
                                     </div>
                                     <div className='product__details__price'>
                                         {product?.newPrice.toLocaleString()}

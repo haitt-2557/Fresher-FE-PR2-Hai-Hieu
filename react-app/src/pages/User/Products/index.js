@@ -17,19 +17,20 @@ const { Option } = Select;
 export default function Product() {
 	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	useEffect(() => {
-		document.title = 'Oragin | Shop';
-		dispatch(getProducts({ page: 1, limit: 9 }));
-		dispatch(getTotalProducts({}));
-		dispatch(getProductHome({}));
-	}, [dispatch]);
 	const params = useSelector((state) => state.productReducer.params);
 	const productSlider = useSelector((state) => state.productReducer.productHome);
 	const productLimit = useSelector((state) => state.productReducer.productsData);
 	const productTotal = useSelector((state) => state.productReducer.totalProduct);
 	const pagination = useSelector((state) => state.productReducer.pagination);
-	const cart = useSelector((state) => state.cart);
-	console.log(cart);
+
+	useEffect(() => {
+		const body = document.querySelector('#root');
+		body.scrollIntoView({ behavior: 'smooth' }, 500);
+		document.title = 'Oragin | Shop';
+		dispatch(getProducts({ page: 1, limit: 9 }));
+		dispatch(getTotalProducts({}));
+		dispatch(getProductHome({}));
+	}, [dispatch]);
 	const handleChangePage = async (currentPage, currentSize) => {
 		const product = productTotal.slice(currentPage * currentSize - currentSize, currentPage * currentSize);
 		const payload = {

@@ -33,26 +33,38 @@ export const cartReducer = (state = cartState, action) => {
 			return { ...state };
 		}
 		case Types.UPDATE_QUANTITY: {
-			if (action.payload.type === 'increase') {
-				state.cartData[action.payload.index].quantity++;
-				console.log(state.cartData[action.payload.index]);
-				state.totalCost += state.cartData[action.payload.index].newPrice;
-			} else {
-				if (state.cartData[action.payload.index].quantity > 1) {
-					state.cartData[action.payload.index].quantity--;
-					state.totalCost -= state.cartData[action.payload.index].newPrice;
+			state.cartData.forEach((product) => {
+				if (product.id === action.payload.item.id) {
+					if (action.payload.type === 'increase') {
+						product.quantity += 1;
+						state.totalCost += product.newPrice;
+					} else {
+						if (product.quantity > 1) {
+							product.quantity -= 1;
+							state.totalCost -= product.newPrice;
+						}
+					}
 				}
-			}
+			});
+
 			localStorage.setItem('productCart', JSON.stringify(state));
 			return { ...state };
 		}
 		case Types.DELETE_PRODUCT_IN_CART: {
-			const newCart = state.cartData.filter((item) => item.id !== action.payload.id);
-			state.totalCost -= action.payload.newPrice * action.payload.quantity;
+			if (action.payload) {
+				const newCart = state.cartData.filter((item) => item.id !== action.payload.id);
+				state.totalCost -= action.payload.newPrice * action.payload.quantity;
 
-			state = { ...state, cartData: newCart, cartNumber: newCart.length };
-			localStorage.setItem('productCart', JSON.stringify(state));
+				state = { ...state, cartData: newCart, cartNumber: newCart.length };
+				localStorage.setItem('productCart', JSON.stringify(state));
 
+				return { ...state };
+			} else {
+				state.cartData = [];
+				state.cartNumber = 0;
+				state.totalCost = 0;
+				localStorage.clear();
+			}
 			return { ...state };
 		}
 		default:

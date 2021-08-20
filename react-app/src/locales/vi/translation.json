@@ -166,7 +166,9 @@
 			"Vegetable Eggplant": "Rau cà tím ",
 			"100% Fresh food": "100% thực phẩm tươi",
 			"Banner": "Cửa hàng Organi",
-			"Banner-bread": "Trang chủ - Của hàng"
+			"Banner-bread": "Trang chủ - Của hàng",
+			"cart": "Giỏ hàng",
+			"cart-bread": "Trang chủ - Giỏ hàng"
 		},
 
 		"countdown": {
@@ -259,18 +261,21 @@
 		"Warning": "Cảnh báo",
 		"You can only order up to 30 products": "Bạn chỉ có thể mua tối đa 30 sản phẩm.",
 		"My Cart": "Giỏ hàng của tôi",
-		"item": "Sản phẩm",
-		"Size": "Kích thước",
+		"Product": "Sản phẩm",
+		"Price": "Giá tiền",
+		"Quantity": "Số lượng",
 		"Clear Cart": "Dọn dẹp giỏ hàng",
 		"Continue Shopping": "Tiếp tục mua sắm",
 		"Subtotal": "Tổng phụ",
 		"Total": "Tổng",
+		"Total Cart": "Tổng giỏ hàng",
 		"Shipping Info": "Thông tin vận chuyển",
 		"Country": "Quốc gia",
 		"Zip/Postal code": "Mã zip / mã bưu điện",
 		"The shopping cart has no products": "Giỏ hàng chưa có sản phẩm nào",
 		"Do you want to delete all products": "Bạn có muốn xoá tất cả sản phẩm không?",
-		"Checkout": "Thanh toán"
+		"Checkout": "Thanh toán",
+		"need login": "Bạn cần đăng nhập trước để tiến hành thanh toán"
 	},
 	"Profile": {
 		"welcome": "Chào mừng",

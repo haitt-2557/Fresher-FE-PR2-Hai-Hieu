@@ -11,12 +11,12 @@ export default function addToCart(product, quantity) {
 		},
 	};
 }
-export function updateCart(type, index) {
+export function updateCart(type, item) {
 	return {
 		type: Types.UPDATE_QUANTITY,
 		payload: {
-			type: type,
-			index: index,
+			type,
+			item,
 		},
 	};
 }

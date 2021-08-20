@@ -73,13 +73,13 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const [visibleMobile, setVisibleMobile] = useState(false);
 	const productCart = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
-	const handleUpQuantity = (index) => {
+	const handleUpQuantity = (item) => {
 		const type = 'increase';
-		dispatch(updateCart(type, index));
+		dispatch(updateCart(type, item));
 	};
-	const handleDownQuantity = (index) => {
+	const handleDownQuantity = (item) => {
 		const type = 'decrease';
-		dispatch(updateCart(type, index));
+		dispatch(updateCart(type, item));
 	};
 
 	const deleteCartProduct = (item) => {
@@ -104,10 +104,9 @@ export default function Navbar({ onChange, users, userExpand }) {
 									{t(drop.name)}
 								</Link>
 							</Menu.Item>
-						))
-						}
-					</Menu >
-				</span >
+						))}
+					</Menu>
+				</span>
 			),
 		);
 	};
@@ -133,11 +132,11 @@ export default function Navbar({ onChange, users, userExpand }) {
 										</Link>
 									</Menu.Item>
 								))}
-							</Menu >
-						</span >
+							</Menu>
+						</span>
 					),
 				)}
-			</div >
+			</div>
 		);
 	};
 	const onShowDrawer = () => {
@@ -198,9 +197,9 @@ export default function Navbar({ onChange, users, userExpand }) {
 													<h3 className='desc__title'>{item.name}</h3>
 													<span className='desc__price'>{item.newPrice.toLocaleString('vi-VN')}</span>
 													<div className='desc__quantity'>
-														<Button icon={<MinusOutlined />} onClick={() => handleDownQuantity(index)} />
+														<Button icon={<MinusOutlined />} onClick={() => handleDownQuantity(item)} />
 														<span className='desc__quantity-number'>{item.quantity}</span>
-														<Button icon={<PlusOutlined />} onClick={() => handleUpQuantity(index)} />
+														<Button icon={<PlusOutlined />} onClick={() => handleUpQuantity(item)} />
 													</div>
 												</div>
 											</div>

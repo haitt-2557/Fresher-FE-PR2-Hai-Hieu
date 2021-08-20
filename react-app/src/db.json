@@ -2,18 +2,17 @@
   "users": [
     {
       "email": "hieulvtgcd17213@fpt.edu.vn",
-      "password": "$2a$10$BoscoxI58dmCIhmB.1YnTelxILyV3RVCw/rQgwTgh50kzrhnULzpO",
-      "firstname": "Lưu",
-      "lastname": "Hiếu",
+      "password": "$2a$10$Db9TR8u1aMvP28etAQtl/OPZEHQwVOP3Pr2NpYDBPZ1x3MlPeIY.S",
+      "firstname": "12",
+      "lastname": "3 123213",
       "role": "user",
-      "id": 1,
-      "description": ""
+      "id": 1
     },
     {
       "email": "truongthanhhai283@gmail.com",
-      "password": "$2a$10$GB6SK9aWuJUFlyN1uWcOx.2zjEEbnxode9V0uySOd1GqEbafdc7Mq",
-      "firstname": "Truong Thanh",
-      "lastname": "Hai",
+      "password": "$2a$10$PHk08Szc0qRNVpxasR809Oizx1jaZe5GtDn/54sQggrFwLp/gXkuu",
+      "firstname": "abc",
+      "lastname": "def",
       "role": "user",
       "id": 2
     }
@@ -890,20 +889,13 @@
       "id": 1
     },
     {
-      "title": "123123123",
-      "content": "123123",
-      "idProduct": "15",
-      "datetime": "2021-08-19 13:43:20",
-      "rate": 4,
+      "title": "good",
+      "content": "very good",
+      "idProduct": "1",
+      "name": "Thanh Hải",
+      "datetime": "2021-08-20 10:35:30",
+      "rate": 5,
       "id": 2
-    },
-    {
-      "title": "123123213123",
-      "content": "123123",
-      "idProduct": "12",
-      "datetime": "2021-08-19 13:46:55",
-      "rate": 4,
-      "id": 3
     }
   ]
 }

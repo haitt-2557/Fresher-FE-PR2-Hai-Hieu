@@ -1,11 +1,12 @@
 /** @format */
 import React, { Suspense } from 'react';
 import { Container } from '@material-ui/core';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Headers';
 import { Spin } from 'antd';
 function App() {
+	const user = localStorage.getItem('profile');
 	return (
 		<Suspense
 			fallback={
@@ -26,42 +27,18 @@ function App() {
 				<Header />
 				<Container maxWidth='lg'>
 					<Switch>
-						<Route
-							exact
-							path='/'
-							component={React.lazy(() => import('./pages/User/Home'))}
-						/>
-						<Route
-							exact
-							path='/login'
-							component={React.lazy(() => import('./pages/User/Login'))}
-						/>
-						<Route
-							exact
-							path='/register'
-							component={React.lazy(() => import('./pages/User/Register'))}
-						/>
-
-						<Route
-							exact
-							path='/product/:id'
-							component={React.lazy(() => import('./pages/User/ProductDetails'))} />
-
-						<Route
-							exact
-							path='/shop'
-							component={React.lazy(() => import('./pages/User/Products'))}
-						/>
-						<Route
-							exact
-							path='/profile'
-							component={React.lazy(() => import('./pages/User/Profiles'))}
-						/>
-					</Switch >
-				</Container >
+						<Route exact path='/' component={React.lazy(() => import('./pages/User/Home'))} />
+						<Route exact path='/login' component={React.lazy(() => import('./pages/User/Login'))} />
+						<Route exact path='/register' component={React.lazy(() => import('./pages/User/Register'))} />
+						<Route exact path='/product/:id' component={React.lazy(() => import('./pages/User/ProductDetails'))} />
+						<Route exact path='/shop' component={React.lazy(() => import('./pages/User/Products'))} />
+						<Route exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></Route>
+						<Route exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles'))}></Route>
+					</Switch>
+				</Container>
 				<Footer />
-			</Router >
-		</Suspense >
+			</Router>
+		</Suspense>
 	);
 }
 

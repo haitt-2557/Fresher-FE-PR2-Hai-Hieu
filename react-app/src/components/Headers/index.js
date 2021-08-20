@@ -18,7 +18,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import './styles.scss';
 import { useState } from 'react';
 import Navbar from './Navbar';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { PhoneOutlined } from '@ant-design/icons';
 const { Option } = Select;
 
@@ -26,7 +26,8 @@ export default function Header() {
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const location = useLocation();
-	const [users, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
+	const users = useSelector(state => state.auth.authData);
+
 
 	const { t, i18n } = useTranslation();
 	const changeLanguage = (lang) => {
@@ -34,12 +35,12 @@ export default function Header() {
 	};
 	const logout = () => {
 		dispatch({ type: 'LOGOUT' });
-		setUser(null);
+		// setUser(null);
 		history.push('/login');
 	};
-	useEffect(() => {
-		setUser(JSON.parse(localStorage.getItem('profile')));
-	}, [location]);
+	// useEffect(() => {
+	// 	setUser(JSON.parse(localStorage.getItem('profile')));
+	// }, [location]);
 
 	const userExpand = (
 		<Menu>
@@ -112,17 +113,18 @@ export default function Header() {
 												</Typography>
 											</Dropdown>
 										</div>
-									)
-									}
-								</div >
-							</div >
-						</div >
-					</div >
-				</Container >
-			</header >
+									)}
+								</div>
+							</div>
+						</div>
+					</div>
+				</Container>
+			</header>
 			<Container>
 				<Navbar onChange={changeLanguage} users={users} userExpand={userExpand} />
-				<section className='home__cate-banner'>
+				<section
+					className='home__cate-banner'
+					style={{ display: location.pathname === '/login' || location.pathname === '/register' ? 'none' : 'block' }}>
 					<Row gutter={[16, 16]}>
 						<Col lg={24} md={24} xs={24}>
 							<div className='home__search'>
@@ -137,7 +139,7 @@ export default function Header() {
 											{t('home.SearchText')}
 										</button>
 									</form>
-								</div >
+								</div>
 								<div className='home__search__phone'>
 									<div className='home__search__phone__icon'>
 										<PhoneOutlined />
@@ -147,11 +149,11 @@ export default function Header() {
 										<span>{t('home.SupportText')}</span>
 									</div>
 								</div>
-							</div >
-						</Col >
-					</Row >
-				</section >
-			</Container >
+							</div>
+						</Col>
+					</Row>
+				</section>
+			</Container>
 			<ToastContainer autoClose='2500' />
 		</>
 	);

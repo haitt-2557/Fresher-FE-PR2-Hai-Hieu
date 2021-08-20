@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Col, Row, Tabs, Collapse } from 'antd';
 import { CalendarOutlined, CommentOutlined } from '@ant-design/icons';
 import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import Slide from './Slide';
 import { getProductHome, getCategory } from '../../../redux/actions/index';
 import { FaTruck, FaRupeeSign } from 'react-icons/fa';
@@ -37,41 +37,41 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 							<div className='banner__item'>
 								<a href='/' className='banner__img'>
 									<img src='https://cdn.shopify.com/s/files/1/0412/8151/9765/files/banner1.jpg?v=1593258151' alt='banner'></img>
-								</a >
+								</a>
 								<div className='banner__content '>
 									<h3 className='banner__title banner__title--white'>
 										{t('home.banner.fresh fruit vegetable')} <br />
 										{t('home.banner.on our product')}
 									</h3>
 									<button className='button button-round button-primary'>{t('home.banner.shop now')}</button>
-								</div >
-							</div >
-						</Col >
+								</div>
+							</div>
+						</Col>
 						<Col md={12} sm={24}>
 							<div className='banner__item'>
 								<a href='/' className='banner__img'>
 									<img src='https://cdn.shopify.com/s/files/1/0412/8151/9765/files/banner2-min.jpg?v=1593256886' alt='banner'></img>
-								</a >
+								</a>
 								<div className='banner__content'>
 									<h3 className='banner__title '>
 										{t('home.banner.Vegetable Eggplant')} <br />
 										{t('home.banner.100% Fresh food')}
 									</h3>
 									<button className='button button-round button-primary'>{t('home.banner.shop now')}</button>
-								</div >
-							</div >
-						</Col >
-					</Row >
-				</section >
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</section>
 
 				<section className='home__category'>
 					<div className='container category__container section-title'>
 						<h2 className='category__title'>{t('home.category.title')}</h2>
 						<div className='category__slide'>
 							<Slide data={categoryData} type='category' xl={6} lg={5} md={4} sm={3} xs={2}></Slide>
-						</div >
-					</div >
-				</section >
+						</div>
+					</div>
+				</section>
 
 				<section className='home__product'>
 					<div className='container product__container'>
@@ -123,9 +123,9 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 								</ul>
 							</div>
 							<button className='button button-round--lg button-primary '>{t('home.countdown.shop collection')}</button>
-						</div >
-					</div >
-				</section >
+						</div>
+					</div>
+				</section>
 
 				<section className='home-blog spad'>
 					<Row gutter={24}>
@@ -157,9 +157,9 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										<a href='#'>Cooking tips make cooking simple</a>
 									</h5>
 									<p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-								</div >
-							</div >
-						</Col >
+								</div>
+							</div>
+						</Col>
 						<Col md={8} sm={24}>
 							<div className='blog__item'>
 								<div className='blog__item-pic'>
@@ -181,9 +181,9 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										<a href='#'>6 ways to prepare breakfast for 30</a>
 									</h5>
 									<p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-								</div >
-							</div >
-						</Col >
+								</div>
+							</div>
+						</Col>
 						<Col md={8} sm={24}>
 							<div className='blog__item'>
 								<div className='blog__item-pic'>
@@ -205,11 +205,11 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										<a href='#'>Visit the clean farm in the US</a>
 									</h5>
 									<p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
-								</div >
-							</div >
-						</Col >
-					</Row >
-				</section >
+								</div>
+							</div>
+						</Col>
+					</Row>
+				</section>
 
 				<div className='service'>
 					<div className='home__service'>
@@ -222,8 +222,8 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										</div>
 									</div>
 									<span className='service__item--title'>{t('Free delivery')}</span>
-								</div >
-							</Col >
+								</div>
+							</Col>
 							<Col xs={24} sm={12} md={12} lg={6} xl={6}>
 								<div className='home__service--item'>
 									<div className='service__item--icon'>
@@ -232,8 +232,8 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										</div>
 									</div>
 									<span className='service__item--title'>{t('Cash On Delivery')}</span>
-								</div >
-							</Col >
+								</div>
+							</Col>
 							<Col xs={24} sm={12} md={12} lg={6} xl={6}>
 								<div className='home__service--item'>
 									<div className='service__item--icon'>
@@ -242,8 +242,8 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										</div>
 									</div>
 									<span className='service__item--title'>{t('30 Days Returns')}</span>
-								</div >
-							</Col >
+								</div>
+							</Col>
 							<Col xs={24} sm={12} md={12} lg={6} xl={6}>
 								<div className='home__service--item'>
 									<div className='service__item--icon'>
@@ -252,13 +252,13 @@ function Home({ getProductHome, productHome, getCategory, categoryData }) {
 										</div>
 									</div>
 									<span className='service__item--title'>{t('Online Support')}</span>
-								</div >
-							</Col >
-						</Row >
-					</div >
-				</div >
-			</div >
-		</div >
+								</div>
+							</Col>
+						</Row>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
 

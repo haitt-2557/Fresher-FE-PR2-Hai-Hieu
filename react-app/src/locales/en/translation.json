@@ -161,7 +161,9 @@
 			"Vegetable Eggplant": "Vegetable Eggplant ",
 			"100% Fresh food": "100% Fresh food",
 			"Banner": "Organi Shop",
-			"Banner-bread": "Home - Shop"
+			"Banner-bread": "Home - Shop",
+			"cart": "Shopping Cart",
+			"cart-bread": "Home - Shopping Cart"
 		},
 
 		"countdown": {
@@ -257,18 +259,21 @@
 		"Warning": "Warning",
 		"You can only order up to 30 products": "You can only order up to 30 products.",
 		"My Cart": "My Cart",
-		"item": "Item",
-		"Size": "Size",
+		"Product": "Products",
+		"Price": "Price",
+		"Quantity": "Quantity",
 		"Clear Cart": "Clear Cart",
 		"Continue Shopping": "Continue Shopping",
 		"Subtotal": "Subtotal",
 		"Total": "Total",
+		"Total Cart": "Total Cart",
 		"Shipping Info": "Shipping Info",
 		"Country": "Country",
 		"Zip/Postal code": "Zip/Postal code",
 		"The shopping cart has no products": "The shopping cart has no products",
 		"Do you want to delete all products": "Do you want to delete all products?",
-		"Checkout": "Checkout"
+		"Checkout": "Checkout",
+		"need login": "You need to log in first to proceed with payment"
 	},
 
 	"Profile": {
