@@ -19,13 +19,14 @@
 	"Address": "Address",
 	"Contact": "Contact",
 	"Cart": "My Cart",
-	"Add cart success": "Add cart success",
+	"Add cart success": "Successfully added to cart",
 	"Checkout": "Checkout",
 	"Shoping Cart": "Shoping Cart",
 	"All Product": "All Product",
 	"Rating": "Rating",
 	"price": "Price",
 	"sale": "Sale Off",
+	"empty-cart": "Your's cart is currently empty!",
 	"Categories": {
 		"Title": "Category",
 		"Top_Categories": {
@@ -146,6 +147,13 @@
 		"SupportText": "Support 24/7",
 		"SearchInput": "What do you need?",
 		"AllCategories": "All Categories",
+		"blog": {
+			"FromTheBlog": "From The Blog",
+			"BlogDateTime": "Aug ,2021",
+			"Title": "6 ways to prepare breakfast",
+			"Content": "After a good night's sleep, the body wakes up with an empty stomach because it has used up all the energy it took in from last night's dinner. Therefore, breakfast is an extremely important meal to provide the body with the necessary energy to start a new day."
+		},
+
 		"banner": {
 			"shop now": "shop now",
 			"fresh fruit vegetable": "Fresh fruit,vegetable ",
@@ -153,7 +161,9 @@
 			"Vegetable Eggplant": "Vegetable Eggplant ",
 			"100% Fresh food": "100% Fresh food",
 			"Banner": "Organi Shop",
-			"Banner-bread": "Home - Shop"
+			"Banner-bread": "Home - Shop",
+			"cart": "Shopping Cart",
+			"cart-bread": "Home - Shopping Cart"
 		},
 
 		"countdown": {
@@ -234,7 +244,13 @@
 		"Material": "Material",
 		"Quantity": "Quantity",
 		"Share": "Share",
-		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and"
+		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
+		"addToCart": "ADD TO CART",
+		"FreePickup": "Free pickup today",
+		"ExpressShipping": "Shipping express",
+		"Weight": "Weight",
+		"RecentProduct": "Recently Product",
+		"review": "reviews"
 	},
 	"cart": {
 		"Yes": "Yes",
@@ -243,18 +259,21 @@
 		"Warning": "Warning",
 		"You can only order up to 30 products": "You can only order up to 30 products.",
 		"My Cart": "My Cart",
-		"item": "Item",
-		"Size": "Size",
+		"Product": "Products",
+		"Price": "Price",
+		"Quantity": "Quantity",
 		"Clear Cart": "Clear Cart",
 		"Continue Shopping": "Continue Shopping",
 		"Subtotal": "Subtotal",
 		"Total": "Total",
+		"Total Cart": "Total Cart",
 		"Shipping Info": "Shipping Info",
 		"Country": "Country",
 		"Zip/Postal code": "Zip/Postal code",
 		"The shopping cart has no products": "The shopping cart has no products",
 		"Do you want to delete all products": "Do you want to delete all products?",
-		"Checkout": "Checkout"
+		"Checkout": "Checkout",
+		"need login": "You need to log in first to proceed with payment"
 	},
 
 	"Profile": {

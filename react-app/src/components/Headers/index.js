@@ -102,7 +102,9 @@ export default function Header() {
 												className='user__infor-avatar'
 												src={users?.user.imageUrl}
 												alt={users?.user.name ? users.user.name : users?.user?.firstname + ' ' + users?.user?.lastname}>
-												{users.user.name ? users.user.name.charAt(0) : (users?.user?.firstname + ' ' + users?.user?.lastname).charAt(0)}
+												{users.user.name
+													? users.user.name.charAt(0)
+													: (users?.user?.firstname + ' ' + users?.user?.lastname).charAt(0)}
 											</Avatar>
 											<Dropdown overlay={userExpand}>
 												<Typography className='user__infor-name' variant='h5'>
@@ -119,7 +121,9 @@ export default function Header() {
 			</header>
 			<Container>
 				<Navbar onChange={changeLanguage} users={users} userExpand={userExpand} />
-				<section className='home__cate-banner'>
+				<section
+					className='home__cate-banner'
+					style={{ display: location.pathname === '/login' || location.pathname === '/register' ? 'none' : 'block' }}>
 					<Row gutter={[16, 16]}>
 						<Col lg={24} md={24} xs={24}>
 							<div className='home__search'>

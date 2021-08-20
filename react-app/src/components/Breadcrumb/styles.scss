@@ -1,0 +1,39 @@
+@import "../../assets/scss/variable";
+@import "../../assets/scss/mixin";
+/*---------------------
+  Breadcrumb
+-----------------------*/
+.breadcrumb {
+    @include flex-box(center, center);
+    padding: 45px 0 40px;
+
+    
+    &__option {
+    
+        a {
+            display: inline-block;
+            font-size: 16px;
+            color: $black;
+            font-weight: 700;
+            margin-right: 20px;
+            position: relative;
+    
+            &:after {
+                position: absolute;
+                right: -12px;
+                top: 13px;
+                height: 1px;
+                width: 10px;
+                background: $black;
+                content: '';
+            }
+        }
+    
+        span {
+            display: inline-block;
+            font-size: 16px;
+            color: $black;
+        }
+    }
+}
+

@@ -20,14 +20,14 @@ export const authReducer = (state = { authData: null }, action) => {
 				loading: false,
 			};
 		case Types.SIGNUP:
-			localStorage.setItem('profile', JSON.stringify({ ...action?.payload }));
 			return {
 				...state,
 				authData: action.payload,
 				loading: false,
 			};
+
 		case Types.LOGOUT:
-			localStorage.clear();
+			localStorage.removeItem('profile');
 			return { ...state, authData: null, loading: false };
 
 		default:
