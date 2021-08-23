@@ -899,5 +899,72 @@
     }
   ],
   "payments": [
+    {
+      "user": "truongthanhhai283@gmail.com",
+      "name": "abc def",
+      "country": "vi",
+      "dataCart": [
+        {
+          "id": 6,
+          "categoryId": 5,
+          "name": "Fresh Dryed Almod (50g) ",
+          "img": [
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/40_590X668_crop_center.jpg?v=1595938684 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/41_590X668_crop_center.jpg?v=1595938684 "
+          ],
+          "rate": 2,
+          "newPrice": 34000,
+          "oldPrice": 38000,
+          "news": true,
+          "tagId": 1,
+          "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
+          "quantity": 1,
+          "total": "34.000"
+        },
+        {
+          "id": 2,
+          "categoryId": 1,
+          "name": "Fresh Blueberry",
+          "img": [
+            " https://cdn.shopify.com/s/files/1/0412/8151/9765/products/1_da8f6f9f-7e5f-4601-ab50-8cfde5005293_590X668_crop_center.jpg?v=1620642742",
+            " https://cdn.shopify.com/s/files/1/0412/8151/9765/products/16_026e9257-47ff-4543-ac04-597e044125ed_590X668_crop_center.jpg?v=1620642742"
+          ],
+          "rate": 5,
+          "newPrice": 23000,
+          "news": true,
+          "tagId": 2,
+          "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
+          "quantity": 2,
+          "total": "46.000"
+        },
+        {
+          "id": 3,
+          "categoryId": 2,
+          "name": "Organic Coconet ",
+          "img": [
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/2_590X668_crop_center.jpg?v=1620642391 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/39_590X668_crop_center.jpg?v=1620642397 "
+          ],
+          "rate": 5,
+          "newPrice": 35000,
+          "news": false,
+          "tagId": 2,
+          "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
+          "quantity": 1,
+          "total": "35.000"
+        }
+      ],
+      "userId": 2,
+      "paymentCode": "ARYA2192756",
+      "email": "truongthanhhai283@gmail.com",
+      "address": "Đà Nẵng",
+      "zipCode": "550000",
+      "phone": "8402455682",
+      "check": true,
+      "isPayment": false,
+      "id": 1,
+      "method": "Standard",
+      "shippingCost": 20000
+    }
   ]
 }

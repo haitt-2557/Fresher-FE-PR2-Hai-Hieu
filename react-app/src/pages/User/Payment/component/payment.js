@@ -146,7 +146,7 @@ const Payment = ({ getInfo, infoUser, createBill }) => {
                                 </Col>
                                 <Col>
                                     <button type="submit" className="button button-round--lg button-primary">
-                                        Lưu
+                                        Tiếp tục
                                     </button>
                                     <button
                                         type="button"

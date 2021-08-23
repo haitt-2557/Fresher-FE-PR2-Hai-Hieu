@@ -36,6 +36,7 @@ function App() {
 						<Route exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></Route>
 						{/* <Route exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles'))}></Route> */}
 						<PaymentLayout exact path="/payment" component={React.lazy(() => import('./pages/User/Payment/component/payment'))} />
+						<PaymentLayout exact path="/shipping" component={React.lazy(() => import('./pages/User/Payment/component/paymentShipping'))} />
 					</Switch>
 				</Container>
 				<Footer />
