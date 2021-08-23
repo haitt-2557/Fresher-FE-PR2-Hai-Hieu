@@ -54,7 +54,7 @@
 		text-align: center;
 		border-radius: 3px;
 		padding: 2.2rem;
-		@include flex-box(center, space);
+		@include flex-box(center, null);
 	}
 	&__total {
 		@include flex-box(center, flex-end);

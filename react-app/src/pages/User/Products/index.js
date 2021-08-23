@@ -1,7 +1,7 @@
 /** @format */
 
 import { Row, Col, Pagination, Select } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../../../components/ProductItem/index';

@@ -1,10 +1,9 @@
 /** @format */
 
 import React from 'react';
-import { Form, Input, Button, Row, Col, Checkbox, Typography } from 'antd';
+import { Form, Input, Button, Row, Col, Typography } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { RiLoginBoxLine } from 'react-icons/ri';
 import { GrGooglePlus } from 'react-icons/gr';
 import { SiGnuprivacyguard } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
@@ -144,9 +143,7 @@ export default function Signup() {
 										<Button
 											className='form-login__btn'
 											onClick={renderProps.onClick}
-											icon={
-												<GrGooglePlus className='form-login__btn--icon' />
-											}>
+											icon={<GrGooglePlus className='form-login__btn--icon' />}>
 											{t('login.google')}
 										</Button>
 									</Form.Item>
@@ -163,9 +160,7 @@ export default function Signup() {
 									span: 20,
 								}}>
 								<Link to='/login'>
-									<Typography style={{ float: 'right' }}>{`${t(
-										'register.already',
-									)} Login`}</Typography>
+									<Typography style={{ float: 'right' }}>{`${t('register.already')} Login`}</Typography>
 								</Link>
 							</Form.Item>
 						</Form>

@@ -31,6 +31,11 @@
 	"price": "Giá tiền",
 	"sale": "giảm giá",
 	"empty-cart": "Giỏ hàng của bạn hiện đang trống!",
+	"required-login": "Đầu tiên bạn cần phải đăng nhập !",
+	"isExist": "Sản phẩm đã được tồn tại trong danh sách yêu thích",
+	"wish": "Thêm sản phẩm vào danh sách yêu thích thành công",
+	"wish-empty": "Danh sách yêu thích của bạn hiện đang trống!",
+
 	"Categories": {
 		"Title": "Danh mục sản phẩm",
 		"Top_Categories": {
@@ -287,11 +292,17 @@
 		"confirm_pwNew": "Mật khẩu không giống !",
 		"max": "Không được quá 20 kí tự !",
 		"submit": "Submit",
+		"my-profile": "Hồ sơ của tôi ",
+		"profile-text": "Quản lý thông tin hồ sơ để bảo mật tài khoản",
+		"update-success": "Cập nhật hồ sơ thành công",
+		"change-password": "Thay đổi mật khẩu",
+		"pass-text": "Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác",
+		"update-password": "Thay đổi mật khẩu thành công",
+		"update-password-fail": "Mật khẩu hiện tại không chính xác",
 		"account": {
 			"title": "Chi tiết tài khoản",
 			"name": "Tên",
 			"address": "Địa chỉ",
-			"phone": "Số điện thoại",
 			"edit": "CHỈNH SỬA",
 			"first": "Tên",
 			"last": "Họ",
@@ -300,7 +311,13 @@
 			"password": "Mật khẩu",
 			"role": "Quyền",
 			"user": "Người dùng",
-			"admin": "Quản trị viên"
+			"admin": "Quản trị viên",
+			"user-info": "Hồ sơ người dùng",
+			"change-pass": "Thay đổi mật khẩu",
+			"order-history": "Lịch sử mua hàng",
+			"change-info": "Cập nhật thông tin",
+			"phone": "Số điện thoại",
+			"birthday": "Ngày sinh"
 		}
 	},
 	"orderHistory": {
