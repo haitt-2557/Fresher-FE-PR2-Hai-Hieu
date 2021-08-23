@@ -1,0 +1,14 @@
+@import "../../../../../assets/scss/variable";
+@import "../../../../../assets/scss/mixin";
+.payment {
+    &__breadcrumb {
+        gap: 0.7rem;
+        padding: 1rem 0 2rem;
+        span {
+            cursor: pointer;
+        }
+        &--active {
+            color: $primary-color;
+        }
+    }
+}

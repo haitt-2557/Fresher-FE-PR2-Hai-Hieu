@@ -6,6 +6,7 @@ import categorySaga from './category.saga';
 import productDetailSaga from './productDetail.saga';
 import authSaga from './authSaga';
 import accountSaga from './account.saga';
+import paymentSaga from "../sagas/payment.saga";
 
 export default function* mySaga() {
     yield fork(productSaga);
@@ -13,4 +14,5 @@ export default function* mySaga() {
     yield fork(productDetailSaga);
     yield fork(categorySaga);
     yield fork(accountSaga);
+    yield fork(paymentSaga);
 }

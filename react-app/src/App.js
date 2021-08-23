@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Headers';
+import PaymentLayout from './layouts/PaymentLayout'
 import { Spin } from 'antd';
 function App() {
 	const user = localStorage.getItem('profile');
@@ -33,7 +34,8 @@ function App() {
 						<Route exact path='/product/:id' component={React.lazy(() => import('./pages/User/ProductDetails'))} />
 						<Route exact path='/shop' component={React.lazy(() => import('./pages/User/Products'))} />
 						<Route exact path='/cart' component={React.lazy(() => import('./pages/User/Cart'))}></Route>
-						<Route exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles'))}></Route>
+						{/* <Route exact path='/profile' component={React.lazy(() => import('./pages/User/Profiles'))}></Route> */}
+						<PaymentLayout exact path="/payment" component={React.lazy(() => import('./pages/User/Payment/component/payment'))} />
 					</Switch>
 				</Container>
 				<Footer />
