@@ -1,20 +1,51 @@
 {
   "users": [
     {
-      "email": "hieulvtgcd17213@fpt.edu.vn",
-      "password": "$2a$10$Db9TR8u1aMvP28etAQtl/OPZEHQwVOP3Pr2NpYDBPZ1x3MlPeIY.S",
-      "firstname": "12",
-      "lastname": "3 123213",
+      "email": "hieuluu@gmail.com",
+      "password": "$2a$10$b09rGgrBVgAJAPWawrUPHuezrkN3nKEAKi5XOXEQM6dgqiMMPLmMi",
+      "firstname": "Hiếu",
+      "lastname": "Lưu",
       "role": "user",
-      "id": 1
+      "id": 1,
+      "phone": "0796849035",
+      "address": "District, Da Nang City",
+      "birthday": "2001-10-09T17:00:00.000Z",
+      "imageUrl": "https://scontent.fdad1-3.fna.fbcdn.net/v/t1.6435-9/171555499_1572742106269507_6648054250086505409_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ty4xLK-1BwcAX8T4xzG&_nc_ht=scontent.fdad1-3.fna&oh=4a8580eee03aeeb62383476c5d9e621d&oe=614956D8"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$Fwzv26S3SQ0wc903rCiDg.oIdA32smsF9DwW30OaUIQLD5i.PTkxW",
+      "role": "admin",
+      "name": "Admin",
+      "id": 2
     },
     {
       "email": "truongthanhhai283@gmail.com",
-      "password": "$2a$10$PHk08Szc0qRNVpxasR809Oizx1jaZe5GtDn/54sQggrFwLp/gXkuu",
-      "firstname": "abc",
-      "lastname": "def",
+      "password": "$2a$10$2HTHW1HN/VrxlQCafvrrzep4.FQwpu3qlyUaAU59nwvM.cQ1uVqxG",
+      "firstname": "Truong Thanh",
+      "lastname": "Hai",
       "role": "user",
-      "id": 2
+      "id": 3,
+      "wishlist": [
+        {
+          "id": 12,
+          "name": "Blackberry 100%Organic ",
+          "img": [
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/4_e3af2cd6-0f26-42a3-8071-42cae821c669_590X668_crop_center.jpg?v=1620644020 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/3_f7390f79-2601-4bf0-a996-6635b67d28c7_590X668_crop_center.jpg?v=1620644039 "
+          ],
+          "price": 23000
+        },
+        {
+          "id": 21,
+          "name": " Fresh Grassben",
+          "img": [
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/39_590X668_crop_center.jpg?v=1620642397 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/2_590X668_crop_center.jpg?v=1620642391 "
+          ],
+          "price": 122000
+        }
+      ]
     }
   ],
   "Category": [
@@ -896,31 +927,23 @@
       "datetime": "2021-08-20 10:35:30",
       "rate": 5,
       "id": 2
+    },
+    {
+      "title": "0",
+      "content": "1",
+      "idProduct": "5",
+      "name": "Luu Van Trung Hieu (FGW DN)",
+      "datetime": "2021-08-21 21:29:39",
+      "rate": 3,
+      "id": 3
     }
   ],
   "payments": [
     {
       "user": "truongthanhhai283@gmail.com",
-      "name": "abc def",
+      "name": "Truong Thanh Hai",
       "country": "vi",
       "dataCart": [
-        {
-          "id": 6,
-          "categoryId": 5,
-          "name": "Fresh Dryed Almod (50g) ",
-          "img": [
-            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/40_590X668_crop_center.jpg?v=1595938684 ",
-            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/41_590X668_crop_center.jpg?v=1595938684 "
-          ],
-          "rate": 2,
-          "newPrice": 34000,
-          "oldPrice": 38000,
-          "news": true,
-          "tagId": 1,
-          "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
-          "quantity": 1,
-          "total": "34.000"
-        },
         {
           "id": 2,
           "categoryId": 1,
@@ -934,37 +957,24 @@
           "news": true,
           "tagId": 2,
           "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
-          "quantity": 2,
-          "total": "46.000"
-        },
-        {
-          "id": 3,
-          "categoryId": 2,
-          "name": "Organic Coconet ",
-          "img": [
-            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/2_590X668_crop_center.jpg?v=1620642391 ",
-            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/39_590X668_crop_center.jpg?v=1620642397 "
-          ],
-          "rate": 5,
-          "newPrice": 35000,
-          "news": false,
-          "tagId": 2,
-          "description": "ORGANIC INDIA Amalaki Ayurvedic 60 Capsules - Vitamin C & Antioxidant Boost  Amalaki provides a full bioavailable source of natural Vitamin C that is easily digested and assimilated. Amalaki detoxified & rejuvenates the digestive system and gastrointestinal tract, and reduces acidity. Amalaki is anti-aging, naturally abundant in antioxidants, helps reduce free radicals and boosts immune response.",
           "quantity": 1,
-          "total": "35.000"
+          "total": "23.000"
         }
       ],
-      "userId": 2,
-      "paymentCode": "ARYA2192756",
+      "userId": 3,
+      "paymentCode": "ARYA3390911",
       "email": "truongthanhhai283@gmail.com",
       "address": "Đà Nẵng",
       "zipCode": "550000",
       "phone": "8402455682",
       "check": true,
-      "isPayment": false,
+      "isPayment": true,
       "id": 1,
       "method": "Standard",
-      "shippingCost": 20000
+      "shippingCost": 20000,
+      "payment": "Cash on Delivery (COD)",
+      "billingAddress": "Same as shipping address",
+      "date": "08/24/2021"
     }
   ]
 }

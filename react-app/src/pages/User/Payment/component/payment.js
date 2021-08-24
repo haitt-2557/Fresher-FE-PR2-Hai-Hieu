@@ -107,7 +107,7 @@ const Payment = ({ getInfo, infoUser, createBill }) => {
                                     <CustomField name="address" type="text" label="Address " />
                                 </Col>
                                 <Col sm={9} xs={24}>
-                                    <CustomField name="phone" type="text" label="Phone " />
+                                    <CustomField name="phone" type="text" label="Phone " placeholder="(84)..." />
                                 </Col>
                                 <Col sm={9} xs={24}>
                                     <div className="form__control">

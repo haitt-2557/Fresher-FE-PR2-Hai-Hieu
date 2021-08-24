@@ -10,11 +10,12 @@ import Slide from '../Home/Slide';
 import { getProductDetail, getProductHome, createComment, getComment } from '../../../redux/actions';
 import { useTranslation } from 'react-i18next';
 import { connect, useDispatch } from 'react-redux';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './style.scss';
 import addToCart from '../../../redux/actions/cart.action';
+import { addWish } from '../../../redux/actions/wishlist.action';
 
 const ProductDetails = ({
     getProductHome,
@@ -30,7 +31,6 @@ const ProductDetails = ({
 }) => {
     const { t } = useTranslation();
     const product = productDetail.product;
-
     const productId = match.params.id;
     const [info, setInfo] = useState(JSON.parse(localStorage.getItem('profile')));
     const [rateValue, setRateValue] = useState(0);
@@ -56,9 +56,10 @@ const ProductDetails = ({
             limit: 10,
         });
     }, [productId, getProductHome, getProductDetail, listComment, current, getComment]);
-
     comments.reverse();
-
+    useEffect(() => {
+        document.title = `Oragin | ${product.name}`;
+    }, [product]);
     function onChange(value) {
         setQuantity(value);
     }
@@ -80,7 +81,7 @@ const ProductDetails = ({
                 ...value,
                 idUser: info.id,
                 idProduct: productId,
-                name: info.user.name ? info.name : info.user.firstname + ' ' + info.user.lastname,
+                name: info.user.name ? info.user.name : info.user.firstname + ' ' + info.user.lastname,
                 datetime: moment().format('YYYY-MM-DD HH:mm:ss'),
                 rate: rateValue,
             });
@@ -148,7 +149,7 @@ const ProductDetails = ({
                                         <button href='#' className='button button-round button-primary' onClick={() => addProductToCart(product)}>
                                             {t('productDetail.addToCart')}
                                         </button>
-                                        <HeartOutlined />
+                                        <HeartOutlined onClick={() => dispatch(addWish(product))} />
                                     </Row>
                                     <ul>
                                         <li>

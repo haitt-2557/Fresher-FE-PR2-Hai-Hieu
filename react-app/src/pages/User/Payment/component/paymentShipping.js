@@ -31,7 +31,7 @@ const Shipping = ({ getBill, billData, updateBill }) => {
                     <PaymentBreadcrumb />
                     <div className="shipping__container">
                         <div className="shipping__info shipping__content">
-                            <div className=" shipping__content--item">
+                            <div className="shipping__content--item">
                                 <div className="shipping__info--inner">
                                     <h4>{t("payments.shipping.Contact")}</h4>
                                     <p>{billData.email}</p>
@@ -69,7 +69,7 @@ const Shipping = ({ getBill, billData, updateBill }) => {
                             </button>
                             <button
                                 className="button button-round button-transparent"
-                                onClick={() => history.push("/paymentAccept")}
+                                onClick={() => history.push("/shipping")}
                             >
                                 <span> {t("payments.shipping.Return to information")}</span>
                             </button>

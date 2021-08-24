@@ -1,34 +1,40 @@
-import React from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { Route } from "react-router-dom";
-import { Steps, Col, Row } from "antd";
-import { ShoppingCartOutlined, SolutionOutlined, LoadingOutlined, SmileOutlined } from "@ant-design/icons";
-import InfoCart from "../components/InfoCart/index";
-import "./styles.scss";
-
-function PaymentLayout({ component: Component, role, ...props }) {
-	const { Step } = Steps;
-	return (
+/** @format */
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
+import { Row, Col } from 'antd';
+import { toast } from 'react-toastify';
+import Footer from '../components/Footer';
+import Header from '../components/Headers';
+import InfoCart from '../components/InfoCart'
+import { Container } from '@material-ui/core';
+function PaymentLayout({ component: Component, ...props }) {
+	const users = localStorage.getItem('profile');
+	return users ? (
 		<Route
 			{...props}
 			render={(routerProps) => (
 				<>
-					<div className=" payment-layout">
-						<div className="main container">
-							<Row justify="" gutter={16}>
-								<Col lg={14} md={18} xs={24} className="payment__left">
-									<Component {...routerProps} />
-								</Col>
-								<Col lg={10} md={18} xs={24}>
-									<InfoCart />
-								</Col>
-							</Row>
-						</div>
-					</div>
+					<Header />
+					<Container maxWidth='lg'>
+						<Row gutter={24}>
+							<Col md={14} sm={24} lg={14}>
+								<Component {...routerProps} />
+							</Col>
+							<Col md={10} sm={24} lg={10}>
+								<InfoCart />
+							</Col>
+						</Row>
+					</Container>
+					<Footer />
 				</>
 			)}
 		/>
+	) : (
+		<Redirect to='/login'>
+			{toast.warning('You need to log in first !', {
+				position: toast.POSITION.TOP_RIGHT,
+			})}
+		</Redirect>
 	);
 }
-
 export default PaymentLayout;

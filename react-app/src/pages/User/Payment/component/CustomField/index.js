@@ -3,13 +3,13 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Checkbox, Input } from "antd";
 import * as Yup from "yup";
 import "./styles.scss";
-const CustomField = ({ name, type, label }) => {
+const CustomField = ({ name, type, label, placeholder }) => {
     return (
         <div className="form__control">
             <label htmlFor="title">{label}</label>
             <Field
                 name={name}
-                render={({ field }) => <Input {...field} type={type} className="form__control--input" />}
+                render={({ field }) => <Input {...field} type={type} className="form__control--input" placeholder={placeholder} />}
             />
             <div className="text-danger">
                 <ErrorMessage name={name} />

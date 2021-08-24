@@ -27,6 +27,10 @@
 	"price": "Price",
 	"sale": "Sale Off",
 	"empty-cart": "Your's cart is currently empty!",
+	"required-login": "You need to log in first !",
+	"isExist": "The product already exists in the wishlist",
+	"wish": "Successfully added product to wishlist",
+	"wish-empty": "Your's wish list is currently empty!",
 	"Categories": {
 		"Title": "Category",
 		"Top_Categories": {
@@ -99,7 +103,7 @@
 		},
 		"zipCode": "ZIP code must contain 6 digits !",
 		"address": {
-			"required": "Password can't be blank !",
+			"required": "Address can't be blank !",
 			"max": "The address cannot exceed 100 characters !"
 		},
 		"phone": {
@@ -286,11 +290,17 @@
 		"confirm_pwNew": "Password don't matches !",
 		"max": "No more than 20 characters !",
 		"submit": "Submit",
+		"my-profile": "My Profie ",
+		"profile-text": "Manage profile information for account security",
+		"update-success": "Updated profile successfully",
+		"update-password": "Updated password successfully",
+		"update-password-fail":"Password does not match",
+		"change-password": "Change password",
+		"pass-text": "For account security, please do not share your password with others",
 		"account": {
 			"title": "Account Detail",
 			"name": "Name",
 			"address": "Address",
-			"phone": "Phone numbers",
 			"edit": "EDIT PROFILE",
 			"first": "First Name",
 			"last": "Last Name",
@@ -299,7 +309,13 @@
 			"password": "Password",
 			"role": "Role",
 			"user": "User",
-			"admin": "Admin"
+			"admin": "Admin",
+			"user-info": "Profile",
+			"change-pass": "Change Password",
+			"order-history": "Purchase History",
+			"change-info": "Change Information",
+			"phone": "Phone number",
+			"birthday": "Birthday"
 		}
 	},
 	"orderHistory": {
@@ -360,7 +376,7 @@
 	},
 	"success": {
 		"Order Success": "Order Success",
-		"Thanks": "Thank you for giving Vegist the opportunity to serve. Please follow by clicking",
+		"Thanks": "Congratulations on your successful order. Please follow by clicking",
 		"Order Management": "Order Management",
 		"Order": "Order",
 		"Receiver": "Receiver",

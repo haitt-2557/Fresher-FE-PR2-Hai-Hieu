@@ -1,12 +1,11 @@
 /** @format */
-
+import React, { useState } from 'react';
 import MailIcon from '@material-ui/icons/Mail';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import React, { useEffect } from 'react';
 import { Avatar, Button, Typography } from '@material-ui/core';
-import { Select, Menu, Dropdown, Row, Col, Collapse } from 'antd';
+import { Select, Menu, Dropdown, Row, Col } from 'antd';
 import Vietnam from '../../assets/images/vi.svg';
 import English from '../../assets/images/en.svg';
 import { useTranslation } from 'react-i18next';
@@ -14,33 +13,34 @@ import PersonIcon from '@material-ui/icons/Person';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import PinterestIcon from '@material-ui/icons/Pinterest';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import './styles.scss';
-import { useState } from 'react';
 import Navbar from './Navbar';
 import { useDispatch, useSelector } from 'react-redux';
 import { PhoneOutlined } from '@ant-design/icons';
+import { getProducts, getTotalProducts } from '../../redux/actions';
 const { Option } = Select;
 
 export default function Header() {
+	const params = useSelector((state) => state.productReducer.params);
 	const dispatch = useDispatch();
 	const history = useHistory();
 	const location = useLocation();
-	const users = useSelector(state => state.auth.authData);
-
-
+	const users = useSelector((state) => state.auth.authData);
+	const [inputValue, setInputValue] = useState('');
 	const { t, i18n } = useTranslation();
 	const changeLanguage = (lang) => {
 		i18n.changeLanguage(lang);
 	};
 	const logout = () => {
 		dispatch({ type: 'LOGOUT' });
-		// setUser(null);
 		history.push('/login');
 	};
-	// useEffect(() => {
-	// 	setUser(JSON.parse(localStorage.getItem('profile')));
-	// }, [location]);
+	const handleSearch = async (e) => {
+		e.preventDefault();
+		dispatch(getProducts({ ...params, name: inputValue }));
+		dispatch(getTotalProducts({ ...params, name: inputValue }));
+	};
 
 	const userExpand = (
 		<Menu>
@@ -122,19 +122,22 @@ export default function Header() {
 			</header>
 			<Container>
 				<Navbar onChange={changeLanguage} users={users} userExpand={userExpand} />
-				<section
-					className='home__cate-banner'
-					style={{ display: location.pathname === '/login' || location.pathname === '/register' ? 'none' : 'block' }}>
+				<section className='home__cate-banner' style={{ display: location.pathname === '/shop' ? 'block' : 'none' }}>
 					<Row gutter={[16, 16]}>
 						<Col lg={24} md={24} xs={24}>
 							<div className='home__search'>
 								<div className='home__search__form'>
-									<form action='#'>
+									<form onSubmit={handleSearch}>
 										<div className='home__search__categories'>
 											{t('home.AllCategories')}
 											<span className='arrow_carrot-down'></span>
 										</div>
-										<input type='text' placeholder={t('home.SearchInput')} />
+										<input
+											type='text'
+											value={inputValue}
+											placeholder={t('home.SearchInput')}
+											onChange={(e) => setInputValue(e.target.value)}
+										/>
 										<button type='submit' className='site-btn button-primary button'>
 											{t('home.SearchText')}
 										</button>

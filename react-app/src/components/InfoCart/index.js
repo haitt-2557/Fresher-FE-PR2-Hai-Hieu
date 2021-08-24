@@ -59,7 +59,7 @@ const InfoCart = () => {
                     <div className="infoCart__price--item">
                         <h4>Shipping</h4>
                         <p>
-                            {(location.pathname === "/payment" ? "Calculated at next step" : 0) || (location.pathname === "/shipping" ? parseInt(20000).toLocaleString() : 0)}
+                            {(location.pathname === "/payment" ? "Calculated at next step" : 0) || (location.pathname === "/shipping" ? parseInt(20000).toLocaleString() : 0) || (location.pathname === "/paymentConfirm" ? parseInt(20000).toLocaleString() : 0)}
                         </p>
                     </div>
 
@@ -70,7 +70,7 @@ const InfoCart = () => {
                             <span>
                                 {(
                                     (product.totalCost) +
-                                    (location.pathname === "/shipping" ? 20000 : 0)
+                                    (location.pathname === "/shipping" || location.pathname === "/paymentConfirm" ? 20000 : 0)
                                 ).toLocaleString()}
                             </span>
                         </p>

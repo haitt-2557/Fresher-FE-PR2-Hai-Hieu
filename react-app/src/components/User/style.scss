@@ -1,0 +1,41 @@
+/** @format */
+@import '../../assets/scss/index.scss';
+.user-side {
+	height: 100%;
+	font-size: 1.6rem;
+	background-color: $border-color;
+	padding: 2rem;
+
+	&__avatar {
+		@include flex-box(center, center);
+		flex-direction: column;
+		div {
+			margin-top: 1rem;
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		.user-avatar {
+			@include box(18rem);
+		}
+	}
+	&__option {
+		list-style: none;
+		&-item {
+			padding: 1rem 0;
+			.item__link {
+				color: $text-color;
+				@include flex-box(center, null);
+				&:hover {
+					color: $primary-color;
+				}
+				&-icon {
+					margin-right: 1rem;
+				}
+			}
+			.item__link.active {
+				color: $primary-color;
+				font-weight: 600;
+			}
+		}
+	}
+}

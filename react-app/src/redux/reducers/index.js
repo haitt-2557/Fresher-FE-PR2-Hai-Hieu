@@ -9,6 +9,7 @@ import productReducer from './productReducer';
 import categoryReducer from './categoryReducer';
 import { productDetailReducer } from './productDetail.reducer';
 import paymentReducer from "./payment.reducer";
+import { wishListReducer } from './wishlist.reducer';
 
 const rootReducer = combineReducers({
 	accountReducer: accountReducer,
@@ -18,6 +19,7 @@ const rootReducer = combineReducers({
 	productReducer,
 	productDetailReducer,
 	categoryReducer,
-	paymentReducer
+	paymentReducer,
+	wish: wishListReducer,
 });
 export default rootReducer;
