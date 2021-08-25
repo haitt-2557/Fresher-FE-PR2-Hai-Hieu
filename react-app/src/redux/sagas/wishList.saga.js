@@ -3,7 +3,7 @@
 import { toast } from 'react-toastify';
 import { Types } from '../constants/wishlist.constant';
 import * as API from '../../api/index';
-import { put, takeEvery } from 'redux-saga/effects';
+import { put, takeLeading } from 'redux-saga/effects';
 
 const userInfo = JSON.parse(localStorage.getItem('profile'));
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) ? JSON.parse(localStorage.getItem('wishlist')) : [];
@@ -66,6 +66,6 @@ function* removeWishList(action) {
 }
 
 export default function* wishList() {
-	yield takeEvery(Types.ADD_WISH_LIST, addToWishList);
-	yield takeEvery(Types.REMOVE_WISH_LIST, removeWishList);
+	yield takeLeading(Types.ADD_WISH_LIST, addToWishList);
+	yield takeLeading(Types.REMOVE_WISH_LIST, removeWishList);
 }

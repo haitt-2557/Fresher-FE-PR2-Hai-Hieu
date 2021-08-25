@@ -1,0 +1,12 @@
+/** @format */
+@import '../../assets/scss/index.scss';
+.admin-sidebar {
+	padding: 1.8rem 1.8rem 0;
+	text-align: center;
+	height: 100vh;
+
+	&__link {
+		font-size: 1.5rem;
+		color: $text-color;
+	}
+}

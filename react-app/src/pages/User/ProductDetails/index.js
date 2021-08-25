@@ -55,17 +55,19 @@ const ProductDetails = ({
 			page: current,
 			limit: 10,
 		});
+		document.title = `Oragin | Product Detail`;
 	}, [productId, getProductHome, getProductDetail, listComment, current, getComment]);
 	comments.reverse();
-	useEffect(() => {
-		document.title = `Oragin | ${product.name}`;
-	}, [product]);
+
 	function onChange(value) {
 		setQuantity(value);
 	}
 
 	function addProductToCart(item) {
 		dispatch(addToCart(item, quantity));
+		toast.success(t('Add cart success'), {
+			position: toast.POSITION.TOP_RIGHT,
+		});
 	}
 	function callback(key) {
 		setIsShowFormComment(!isShowFormComment);
@@ -74,7 +76,15 @@ const ProductDetails = ({
 	function handleChangRate(value) {
 		setRateValue(value);
 	}
-
+	function handleAddWish(product) {
+		if (info) {
+			dispatch(addWish(product));
+		} else {
+			toast.warning(t('required-login'), {
+				position: toast.POSITION.TOP_RIGHT,
+			});
+		}
+	}
 	const handleSubmitFormComment = (value) => {
 		if (isPayment === true) {
 			createComment({
@@ -149,7 +159,7 @@ const ProductDetails = ({
 										<button href='#' className='button button-round button-primary' onClick={() => addProductToCart(product)}>
 											{t('productDetail.addToCart')}
 										</button>
-										<HeartOutlined onClick={() => dispatch(addWish(product))} />
+										<HeartOutlined onClick={() => handleAddWish(product)} />
 									</Row>
 									<ul>
 										<li>
@@ -178,7 +188,6 @@ const ProductDetails = ({
 							</div>
 						</Col>
 					</Row>
-
 					<Row>
 						<Col md={24} sm={24} lg={24}>
 							<div className='productDetail__reviews'>

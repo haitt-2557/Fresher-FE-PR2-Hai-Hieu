@@ -298,6 +298,9 @@
 					text-transform: uppercase;
 					font-weight: 600;
 
+					.ant-menu-item-selected {
+						background-color: $primary-color !important;
+					}
 					&--hasChild {
 						position: relative;
 
@@ -315,4 +318,5 @@
 }
 .ant-menu-item-selected {
 	background-color: $primary-color !important;
+	color: $text-white !important;
 }
