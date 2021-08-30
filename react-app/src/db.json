@@ -18,7 +18,27 @@
       "password": "$2a$10$Fwzv26S3SQ0wc903rCiDg.oIdA32smsF9DwW30OaUIQLD5i.PTkxW",
       "role": "admin",
       "name": "Admin",
-      "id": 2
+      "id": 2,
+      "wishlist": [
+        {
+          "id": 4,
+          "name": " Fresh Mussel (500g)",
+          "img": [
+            " https://cdn.shopify.com/s/files/1/0412/8151/9765/products/45_590X668_crop_center.jpg?v=1595938822",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/44_590X668_crop_center.jpg?v=1595938822 "
+          ],
+          "price": 20000
+        },
+        {
+          "id": 12,
+          "name": "Blackberry 100%Organic ",
+          "img": [
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/4_e3af2cd6-0f26-42a3-8071-42cae821c669_590X668_crop_center.jpg?v=1620644020 ",
+            "https://cdn.shopify.com/s/files/1/0412/8151/9765/products/3_f7390f79-2601-4bf0-a996-6635b67d28c7_590X668_crop_center.jpg?v=1620644039 "
+          ],
+          "price": 23000
+        }
+      ]
     },
     {
       "email": "truongthanhhai283@gmail.com",
@@ -976,6 +996,25 @@
       "payment": "Cash on Delivery (COD)",
       "billingAddress": "Use a different billing address",
       "date": "08/24/2021"
+    },
+    {
+      "name": "Trương Thanh Hải",
+      "country": "vi",
+      "dataCart": [],
+      "paymentCode": "ARYA2332390",
+      "email": "admin@gmail.com",
+      "address": "123123123123",
+      "zipCode": "550000",
+      "phone": "8402455682",
+      "check": true,
+      "isPayment": true,
+      "id": 2,
+      "method": "Standard",
+      "shippingCost": 20000,
+      "payment": "Cash on Delivery (COD)",
+      "billingAddress": "Same as shipping address",
+      "date": "27/08/2021",
+      "totalCost": 20000
     }
   ]
 }

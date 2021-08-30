@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, Link } from 'react-router-dom';
 import { Avatar, Typography } from '@material-ui/core';
@@ -21,6 +21,7 @@ import { updateCart, deleteCart } from '../../../redux/actions/cart.action';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { deleteWish } from '../../../redux/actions/wishlist.action';
+import * as API from '../../../api';
 
 const { Option } = Select;
 const navbarData = [
@@ -74,8 +75,8 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const [visibleMobile, setVisibleMobile] = useState(false);
 	const [isWishList, setIsWishList] = useState(false);
 	const productCart = useSelector((state) => state.cart);
-	const user = localStorage.getItem('profile');
 	const wish_list = useSelector((state) => state.wish);
+	const [userInfo, setUserInfo] = useState({});
 	const dispatch = useDispatch();
 	const handleUpQuantity = (item) => {
 		const type = 'increase';
@@ -89,6 +90,16 @@ export default function Navbar({ onChange, users, userExpand }) {
 	const deleteCartProduct = (item) => {
 		dispatch(deleteCart(item));
 	};
+
+	useEffect(() => {
+		async function getUserInfo() {
+			if (users && users.user?.role === 'user') {
+				const { data } = await API.getUserInfo(users?.user?.id);
+				setUserInfo(data);
+			}
+		}
+		getUserInfo();
+	}, [users, wish_list]);
 
 	const menu = (data) => {
 		return data.map((item, index) =>
@@ -157,7 +168,7 @@ export default function Navbar({ onChange, users, userExpand }) {
 		setVisibleMobile(false);
 	};
 	const onShowWishList = () => {
-		if (user) {
+		if (users) {
 			setIsWishList(true);
 		} else {
 			toast.warning(
@@ -181,7 +192,7 @@ export default function Navbar({ onChange, users, userExpand }) {
 					<div className='navbar__cart-icon'>
 						<div className='icon__wish'>
 							<FavoriteIcon className='icon__wish-icon' onClick={onShowWishList} />
-							<span className='icon__wish-number'>{wish_list.numberWishList}</span>
+							<span className='icon__wish-number'>{userInfo?.wishlist?.length > 0 && users ? userInfo?.wishlist?.length : 0}</span>
 							<Drawer
 								title={t('Categories.My_Account.My Wishlist')}
 								width={360}
@@ -190,8 +201,8 @@ export default function Navbar({ onChange, users, userExpand }) {
 								onClose={onCloseWishList}
 								visible={isWishList}
 								getContainer={false}>
-								{wish_list?.wishList.length > 0 ? (
-									wish_list?.wishList.map((item, index) => (
+								{userInfo?.wishlist?.length > 0 ? (
+									userInfo?.wishlist.map((item, index) => (
 										<div className='cart-drawer' key={item.id + index}>
 											<div className='cart-drawer__product'>
 												<img src={item?.img[0]} alt={item.name} className='cart-drawer__product-img' />

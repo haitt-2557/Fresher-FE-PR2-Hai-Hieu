@@ -15,3 +15,4 @@ export const addWish = (item, id) => API.patch(`/users/${id}`, item);
 export const removeWish = (item, id) => API.patch(`/users/${id}`, item);
 export const updateProfile = (form, id) => API.patch(`/users/${id}`, form);
 export const getUserInfo = (id) => API.get(`/users/${id}`);
+export const getUser = () => API.get('/users');

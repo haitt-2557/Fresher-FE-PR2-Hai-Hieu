@@ -102,7 +102,7 @@ export default function Login() {
 									offset: 4,
 									span: 20,
 								}}>
-								<Button htmlType='submit' className='form-login__btn'>
+								<Button htmlType='submit' className='form-login__btn '>
 									{t('login.button register')}
 								</Button>
 							</Form.Item>
@@ -123,7 +123,7 @@ export default function Login() {
 											span: 20,
 										}}>
 										<Button
-											className='form-login__btn'
+											className='form-login__btn button-primary'
 											onClick={renderProps.onClick}
 											icon={<GrGooglePlus className='form-login__btn--icon' />}>
 											{t('login.google')}

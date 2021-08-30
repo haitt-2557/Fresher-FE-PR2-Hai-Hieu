@@ -32,10 +32,10 @@
 	"wish": "Successfully added product to wishlist",
 	"wish-empty": "Your's wish list is currently empty!",
 	"product": "Products",
-	"category": "Categories",
+	"order": "Orders",
 	"manage-product": "Manage Products",
 	"add-product": "Add New Product",
-	"manage-category": "Manage Categories",
+	"manage-order": "Manage Orders",
 	"add-category": "Add New Category",
 	"manage-user": "Manage Users",
 	"user": "Users",
@@ -393,6 +393,7 @@
 		"Delivery address": "Delivery address",
 		"Staff will call to confirm before delivery": "Staff will call to confirm before delivery",
 		"Estimated delivery time": "Estimated delivery time",
+		"Shipping fee": "Shipping fee",
 		"day": "day",
 		"Total amount": "Total amount",
 		"Payment type": "Payment type",
@@ -400,7 +401,7 @@
 		"When you need help, please call": "When you need help, please call",
 		"Products purchased": "Products purchased",
 		"amount": "Amount",
-		"return to home page": "return to home page"
+		"return to home page": "Return to home page"
 	},
 	"admin": {
 		"listUser": {
@@ -420,9 +421,9 @@
 			"More new products": "More new products",
 			"Enter product name": "Enter product name...",
 			"Product's name": "Product's name",
-			"Product Line": "Product line",
+			"ProductCategory": "Product Category",
 			"Select product line": "Select product line...",
-			"Unit price": "Unit price",
+			"Price": "Price",
 			"Enter unit price": "Enter unit price...",
 			"New price": "New price",
 			"Enter new price": "Enter new price",

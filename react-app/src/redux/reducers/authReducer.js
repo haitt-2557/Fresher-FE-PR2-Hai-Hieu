@@ -25,12 +25,11 @@ export const authReducer = (state = authState, action) => {
 			localStorage.setItem('profile', JSON.stringify({ ...action?.payload }));
 			return {
 				...state,
-				authData: action.payload,
-				loading: false,
 			};
 
 		case Types.LOGOUT:
 			localStorage.removeItem('profile');
+			localStorage.removeItem('wishlist');
 			return { ...state, authData: null, loading: false };
 
 		case Types.UPDATE_PROFILE: {

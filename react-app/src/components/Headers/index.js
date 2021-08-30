@@ -39,7 +39,6 @@ export default function Header() {
 	const handleSearch = async (e) => {
 		e.preventDefault();
 		dispatch(getProducts({ ...params, name: inputValue }));
-		dispatch(getTotalProducts({ ...params, name: inputValue }));
 	};
 
 	const userExpand = (
